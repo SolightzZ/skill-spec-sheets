@@ -741,7 +741,6 @@
       }
     ],
     idKey: "id",
-    filters: "static",
     unit: "คำสั่ง",
     catLabel: {
       pipeline: "ไปป์ไลน์",

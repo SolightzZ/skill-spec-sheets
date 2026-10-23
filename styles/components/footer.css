@@ -20,4 +20,15 @@
 .foot-meta:empty {
   display: none;
 }
+/* Source-repo link (GitHub · owner/repo), same scale as footer meta. */
+.foot a {
+  font-family: var(--data);
+  font-size: 0.75rem;
+  text-decoration-color: transparent;
+  transition: text-decoration-color 0.12s ease;
+}
+.foot a:hover,
+.foot a:focus-visible {
+  text-decoration-color: currentColor;
+}
 

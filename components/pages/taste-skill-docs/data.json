@@ -28,9 +28,6 @@
     "ariaLabel": "ค้นหาและติดตั้ง",
     "label": "ค้นหาก้าว",
     "placeholder": "inventory direction gate app",
-    "filters": {
-      "mode": "none"
-    },
     "status": "12 จาก 12 ขั้น"
   },
   "index": {
@@ -44,7 +41,7 @@
   "footer": {
     "note": "",
     "meta": "taste-skill 2.1.4 · MIT",
-    "source": "ที่มา <code>github.com/Leonxlnx/taste-skill</code>"
+    "source": "ที่มา <a href=\"https://github.com/Leonxlnx/taste-skill\" target=\"_blank\" rel=\"noreferrer\">GitHub &middot; Leonxlnx/taste-skill</a>"
   },
   "noscript": "หน้านี้ต้องใช้ JavaScript เพื่อแสดงทั้ง 12 รายการ"
 }

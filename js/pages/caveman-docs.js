@@ -1134,7 +1134,6 @@
       }
     ],
     idKey: "id",
-    filters: "static",
     unit: "รายการ",
     flow: [
       { id: "all", label: "ทั้งหมด" },

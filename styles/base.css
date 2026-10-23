@@ -76,6 +76,12 @@ a {
 
 
 /* ---------- utilities ---------- */
+/* Style for the <noscript> fallback paragraph; kept here instead of an inline
+   style attribute so a strict CSP (style-src-attr blocked) does not strip it. */
+.noscript-plain {
+  padding: 24px;
+}
+
 .sr-only {
   position: absolute;
   width: 1px;

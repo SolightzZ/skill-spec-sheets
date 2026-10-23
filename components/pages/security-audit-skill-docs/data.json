@@ -28,49 +28,6 @@
     "ariaLabel": "ค้นหาและติดตั้ง",
     "label": "ค้นหาเฟส",
     "placeholder": "security-audit recon hunting schema report",
-    "filters": {
-      "mode": "static",
-      "className": "filters",
-      "ariaLabel": "กรองตามหมวด",
-      "chips": [
-        {
-          "cat": "all",
-          "label": "ทั้งหมด",
-          "count": 7,
-          "pressed": "true"
-        },
-        {
-          "cat": "start",
-          "label": "เริ่มต้น",
-          "count": 1,
-          "pressed": "false"
-        },
-        {
-          "cat": "map",
-          "label": "วางแผน",
-          "count": 1,
-          "pressed": "false"
-        },
-        {
-          "cat": "hunt",
-          "label": "ล่าช่องโหว่",
-          "count": 1,
-          "pressed": "false"
-        },
-        {
-          "cat": "verify",
-          "label": "ตรวจสอบ",
-          "count": 2,
-          "pressed": "false"
-        },
-        {
-          "cat": "report",
-          "label": "รายงาน",
-          "count": 2,
-          "pressed": "false"
-        }
-      ]
-    },
     "status": "7 จาก 7 รายการ"
   },
   "index": {
@@ -84,7 +41,7 @@
   "footer": {
     "note": "",
     "meta": "security-audit c1c8a8c · MIT",
-    "source": "ที่มา <code>github.com/cloudflare/security-audit-skill</code> · MIT"
+    "source": "ที่มา <a href=\"https://github.com/cloudflare/security-audit-skill\" target=\"_blank\" rel=\"noreferrer\">GitHub &middot; cloudflare/security-audit-skill</a> · MIT"
   },
   "noscript": "หน้านี้ต้องใช้ JavaScript เพื่อแสดง 7 รายการ: security-audit skill และ 6 เฟส"
 }

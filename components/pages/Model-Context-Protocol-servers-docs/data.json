@@ -28,43 +28,6 @@
     "ariaLabel": "ค้นหาและกรองเซิร์ฟเวอร์",
     "label": "ค้นหาเซิร์ฟเวอร์",
     "placeholder": "ชื่อเซิร์ฟเวอร์ หรือเครื่องมือ",
-    "filters": {
-      "mode": "static",
-      "className": "",
-      "ariaLabel": "กรองตามหมวด",
-      "chips": [
-        {
-          "cat": "all",
-          "label": "ทั้งหมด",
-          "count": 7,
-          "pressed": "true"
-        },
-        {
-          "cat": "files",
-          "label": "ไฟล์และโค้ด",
-          "count": 2,
-          "pressed": "false"
-        },
-        {
-          "cat": "context",
-          "label": "เว็บและเวลา",
-          "count": 2,
-          "pressed": "false"
-        },
-        {
-          "cat": "mind",
-          "label": "ความจำและการคิด",
-          "count": 2,
-          "pressed": "false"
-        },
-        {
-          "cat": "protocol",
-          "label": "ทดสอบโปรโตคอล",
-          "count": 1,
-          "pressed": "false"
-        }
-      ]
-    },
     "status": "7 จาก 7 เซิร์ฟเวอร์"
   },
   "index": {
@@ -78,7 +41,7 @@
   "footer": {
     "note": "",
     "meta": "servers 0.6.2 · MIT / Apache-2.0",
-    "source": "ที่มา <code>github.com/modelcontextprotocol/servers</code>"
+    "source": "ที่มา <a href=\"https://github.com/modelcontextprotocol/servers\" target=\"_blank\" rel=\"noreferrer\">GitHub &middot; modelcontextprotocol/servers</a>"
   },
   "noscript": "หน้านี้ต้องใช้ JavaScript เพื่อแสดงรายการ 7 เซิร์ฟเวอร์"
 }

@@ -28,37 +28,6 @@
     "ariaLabel": "ค้นหาและกรองทักษะ",
     "label": "ค้นหาทักษะ",
     "placeholder": "ชื่อ หรือสิ่งที่อยากทำ",
-    "filters": {
-      "mode": "static",
-      "className": "",
-      "ariaLabel": "กรองตามหมวด",
-      "chips": [
-        {
-          "cat": "all",
-          "label": "ทั้งหมด",
-          "count": 15,
-          "pressed": "true"
-        },
-        {
-          "cat": "process",
-          "label": "กระบวนการ",
-          "count": 5,
-          "pressed": "false"
-        },
-        {
-          "cat": "code",
-          "label": "โค้ด",
-          "count": 7,
-          "pressed": "false"
-        },
-        {
-          "cat": "meta",
-          "label": "พื้นฐาน",
-          "count": 3,
-          "pressed": "false"
-        }
-      ]
-    },
     "status": "15 จาก 15 ทักษะ"
   },
   "index": {
@@ -72,7 +41,7 @@
   "footer": {
     "note": "",
     "meta": "superpowers 7.0.0 · MIT",
-    "source": "ที่มา <code>github.com/obra/superpowers</code>"
+    "source": "ที่มา <a href=\"https://github.com/obra/superpowers\" target=\"_blank\" rel=\"noreferrer\">GitHub &middot; obra/superpowers</a>"
   },
   "noscript": "หน้านี้ต้องใช้ JavaScript เพื่อแสดงรายการ 15 ทักษะ"
 }

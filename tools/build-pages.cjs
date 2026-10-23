@@ -59,32 +59,19 @@ function renderStamp(stamp) {
   return stamp.map((item) => `    <div><dt>${item.label}</dt><dd>${item.value}</dd></div>`).join("\n");
 }
 
-function renderFilters(filters) {
-  if (!filters || filters.mode === "none") return "";
-  const className = filters.className ? ` class="${filters.className}"` : "";
-  const open = filters.mode === "dynamic"
-    ? `    <div${className} id="filters" role="group" aria-label="${filters.ariaLabel}">`
-    : `    <div id="filters"${className} role="group" aria-label="${filters.ariaLabel}">`;
-  if (filters.mode === "dynamic") return `\n${open}</div>\n`;
-
-  let previousGroup = null;
-  const chips = filters.chips.map((chip) => {
-    const group = chip.group || "";
-    const label = group && group !== previousGroup
-      ? `      <span class="filter-group-label">${group === "flow" ? "เส้นทางงาน" : group === "support" ? "เครื่องมือประกอบ" : "รายการ"}</span>\n`
-      : "";
-    previousGroup = group || previousGroup;
-    return label + `      <button class="chip" type="button" data-cat="${chip.cat}" data-group="${group}" aria-pressed="${chip.pressed}">${chip.label} <span class="count">${chip.count}</span></button>`;
-  }).join("\n");
-  return `\n${open}\n${chips}\n    </div>\n`;
-}
-
 function pageData(dir) {
   const data = JSON.parse(read(path.join(dir, "data.json")));
   for (const key of ["stem", "title", "description", "masthead", "rail", "index", "detail", "footer", "noscript"]) {
     if (!Object.prototype.hasOwnProperty.call(data, key)) {
       throw new Error(`${dir}/data.json is missing "${key}"`);
     }
+  }
+  // Security (security_best_practices_report.md F-04): the stem drives both the
+  // output filename and the body class, so restrict it to a safe identifier and
+  // keep it in sync with the folder name (single source of truth).
+  const folder = path.basename(dir);
+  if (data.stem !== folder || !/^[A-Za-z][A-Za-z0-9-]*$/.test(data.stem)) {
+    throw new Error(`${dir}/data.json has an invalid stem ${JSON.stringify(data.stem)} (must match the folder name)`);
   }
   return data;
 }
@@ -108,7 +95,6 @@ function buildPage(dir) {
     railAriaLabel: data.rail.ariaLabel,
     railLabel: data.rail.label,
     railPlaceholder: data.rail.placeholder,
-    filters: renderFilters(data.rail.filters),
     railExtra: slot(dir, "rail-extra.html", 4),
     status: data.rail.status,
     install: slot(dir, "install.html", 4),

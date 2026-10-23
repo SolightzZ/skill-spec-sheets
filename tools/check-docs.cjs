@@ -142,9 +142,6 @@ for (const file of fs.readdirSync(PAGES).filter((name) => name.endsWith(".js")).
       fail(stem + "#" + id, "sourcePath not found in " + repoDir + ": " + item.sourcePath);
     }
 
-    if (config.filters === "static" && !(item.cat in (config.catLabel || {}))) {
-      fail(stem + "#" + id, "cat without catLabel: " + item.cat);
-    }
     cats[item.cat] = (cats[item.cat] || 0) + 1;
 
     try {
@@ -168,26 +165,6 @@ for (const file of fs.readdirSync(PAGES).filter((name) => name.endsWith(".js")).
     continue;
   }
   if (data.stem !== stem) fail(stem, "data.json stem is " + data.stem);
-
-  const filtersMode = (data.rail && data.rail.filters && data.rail.filters.mode) || "none";
-  if (filtersMode !== config.filters) {
-    fail(stem, "data.json filters.mode is " + filtersMode + ", page module filters is " + config.filters);
-  }
-
-  const chips = (data.rail && data.rail.filters && data.rail.filters.chips) || [];
-  if (config.filters === "static") {
-    if (!chips.length) fail(stem, "static filters but no chips in data.json");
-    chips.forEach((chip) => {
-      const actual = chip.cat === "all" ? config.data.length : (cats[chip.cat] || 0);
-      if (chip.count !== actual) {
-        fail(stem, "chip " + chip.cat + " says " + chip.count + ", data has " + actual);
-      }
-    });
-    const known = new Set(chips.filter((chip) => chip.cat !== "all").map((chip) => chip.cat));
-    Object.keys(cats).forEach((cat) => {
-      if (!known.has(cat)) fail(stem, "cat " + cat + " has no chip");
-    });
-  }
 
   const statusMatch = /แสดง\s+(\d+)\s+จาก\s+(\d+)/.exec((data.rail && data.rail.status) || "");
   if (statusMatch && Number(statusMatch[2]) !== config.data.length) {

@@ -288,7 +288,6 @@
   NS.pages["agent-skills-docs"] = {
     data: data,
     idKey: "id",
-    filters: "static",
     unit: "รายการ",
     flow: [
       { id: "all", label: "ทั้งหมด" },
@@ -297,7 +296,10 @@
       { id: "build", label: "สร้าง" },
       { id: "verify", label: "พิสูจน์" },
       { id: "review", label: "ตรวจ" },
-      { id: "ship", label: "ปล่อย" }
+      { id: "ship", label: "ปล่อย" },
+      { id: "meta", label: "พื้นฐาน" },
+      { id: "command", label: "คำสั่ง" },
+      { id: "agent", label: "บทบาท" }
     ],
     catLabel: {
       define: "นิยาม",

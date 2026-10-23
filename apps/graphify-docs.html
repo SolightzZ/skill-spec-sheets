@@ -2,6 +2,10 @@
 <html lang="th">
 <head>
 <meta charset="utf-8">
+<!-- Security: strict CSP — the site ships zero third-party resources, inline
+     script, or inline style, so nothing more than same-origin files is needed.
+     (security_best_practices_report.md F-01/F-06). -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; connect-src 'none'; form-action 'none'; base-uri 'none'">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="graphify 0.9.93 — 16 คำสั่งสร้างและถาม knowledge graph">
 <title>graphify — command sheet 0.9.93</title>
@@ -27,7 +31,6 @@
   <section class="rail" aria-label="ค้นหาและติดตั้ง">
     <label for="search">ค้นหาคำสั่ง</label>
     <input id="search" type="search" placeholder="สร้าง ถาม path update PR export" autocomplete="off" spellcheck="false">
-
 
     <nav class="flow-nav" aria-label="เส้นทางงาน">
       <p class="flow-nav-label">เส้นทางงาน</p>
@@ -81,11 +84,11 @@
 <footer class="foot">
   <span></span>
   <span class="foot-meta">graphify 0.9.93 · Apache-2.0</span>
-  <span>ที่มา <code>github.com/Graphify-Labs/graphify</code> · PyPI <code>graphifyy</code></span>
+  <span>ที่มา <a href="https://github.com/Graphify-Labs/graphify" target="_blank" rel="noreferrer">GitHub &middot; Graphify-Labs/graphify</a> · PyPI <code>graphifyy</code></span>
 </footer>
 
 <noscript>
-  <p style="padding:24px">หน้านี้ต้องใช้ JavaScript เพื่อแสดงคำสั่งทั้ง 16 รายการ</p>
+  <p class="noscript-plain">หน้านี้ต้องใช้ JavaScript เพื่อแสดงคำสั่งทั้ง 16 รายการ</p>
 </noscript>
 
 <script src="../index.js" defer></script>

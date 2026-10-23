@@ -1,5 +1,9 @@
 <head>
 <meta charset="utf-8">
+<!-- Security: strict CSP — the site ships zero third-party resources, inline
+     script, or inline style, so nothing more than same-origin files is needed.
+     (security_best_practices_report.md F-01/F-06). -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; connect-src 'none'; form-action 'none'; base-uri 'none'">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="{{description}}">
 <title>{{title}}</title>

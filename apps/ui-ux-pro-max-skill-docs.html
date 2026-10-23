@@ -2,6 +2,10 @@
 <html lang="th">
 <head>
 <meta charset="utf-8">
+<!-- Security: strict CSP — the site ships zero third-party resources, inline
+     script, or inline style, so nothing more than same-origin files is needed.
+     (security_best_practices_report.md F-01/F-06). -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; connect-src 'none'; form-action 'none'; base-uri 'none'">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="UI UX Pro Max 2.15.0 — 7 skills, 7 steps, 5 references และ 1,272 stack guidelines">
 <title>ui ux pro max — design intelligence</title>
@@ -27,7 +31,6 @@
   <section class="rail" aria-label="ค้นหาและติดตั้ง">
     <label for="search">ค้นหาสกิลและขั้นตอน</label>
     <input id="search" type="search" placeholder="design system persist stack ux" autocomplete="off" spellcheck="false">
-
 
     <nav class="flow-nav" aria-label="เส้นทางงาน">
       <p class="flow-nav-label">เส้นทางงาน</p>
@@ -72,11 +75,11 @@
 <footer class="foot">
   <span></span>
   <span class="foot-meta">ui-ux-pro-max 2.15.0 · MIT</span>
-  <span>ที่มา <code>github.com/nextlevelbuilder/ui-ux-pro-max-skill</code></span>
+  <span>ที่มา <a href="https://github.com/nextlevelbuilder/ui-ux-pro-max-skill" target="_blank" rel="noreferrer">GitHub &middot; nextlevelbuilder/ui-ux-pro-max-skill</a></span>
 </footer>
 
 <noscript>
-  <p style="padding:24px">หน้านี้ต้องใช้ JavaScript เพื่อแสดงทั้ง 19 รายการ</p>
+  <p class="noscript-plain">หน้านี้ต้องใช้ JavaScript เพื่อแสดงทั้ง 19 รายการ</p>
 </noscript>
 
 <script src="../index.js" defer></script>

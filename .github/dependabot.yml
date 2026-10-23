@@ -1,0 +1,8 @@
+# Keep GitHub Actions pinned to full commit SHAs; Dependabot opens PRs for new
+# versions (see security_best_practices_report.md F-05).
+version: 2
+updates:
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"

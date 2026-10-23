@@ -154,7 +154,6 @@
       }
     ],
     idKey: "id",
-    filters: "none",
     unit: "รายการ",
     catLabel: {
       workflow: "กระบวนการ",

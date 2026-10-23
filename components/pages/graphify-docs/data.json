@@ -28,49 +28,6 @@
     "ariaLabel": "ค้นหาและติดตั้ง",
     "label": "ค้นหาคำสั่ง",
     "placeholder": "สร้าง ถาม path update PR export",
-    "filters": {
-      "mode": "static",
-      "className": "",
-      "ariaLabel": "กรองตามหมวด",
-      "chips": [
-        {
-          "cat": "all",
-          "label": "ทั้งหมด",
-          "count": 16,
-          "pressed": "true"
-        },
-        {
-          "cat": "pipeline",
-          "label": "ไปป์ไลน์",
-          "count": 4,
-          "pressed": "false"
-        },
-        {
-          "cat": "query",
-          "label": "ถามกราฟ",
-          "count": 4,
-          "pressed": "false"
-        },
-        {
-          "cat": "maintain",
-          "label": "ดูแลกราฟ",
-          "count": 5,
-          "pressed": "false"
-        },
-        {
-          "cat": "install",
-          "label": "ติดตั้ง",
-          "count": 2,
-          "pressed": "false"
-        },
-        {
-          "cat": "export",
-          "label": "ส่งออก",
-          "count": 1,
-          "pressed": "false"
-        }
-      ]
-    },
     "status": "16 จาก 16 คำสั่ง"
   },
   "index": {
@@ -84,7 +41,7 @@
   "footer": {
     "note": "",
     "meta": "graphify 0.9.93 · Apache-2.0",
-    "source": "ที่มา <code>github.com/Graphify-Labs/graphify</code> · PyPI <code>graphifyy</code>"
+    "source": "ที่มา <a href=\"https://github.com/Graphify-Labs/graphify\" target=\"_blank\" rel=\"noreferrer\">GitHub &middot; Graphify-Labs/graphify</a> · PyPI <code>graphifyy</code>"
   },
   "noscript": "หน้านี้ต้องใช้ JavaScript เพื่อแสดงคำสั่งทั้ง 16 รายการ"
 }

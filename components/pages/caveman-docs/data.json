@@ -28,53 +28,6 @@
     "ariaLabel": "ค้นหาและกรองรายการ",
     "label": "ค้นหา",
     "placeholder": "ชื่อสวิตช์ คำสั่ง หรือตัวเลข",
-    "filters": {
-      "mode": "static",
-      "chips": [
-        {
-          "cat": "all",
-          "label": "ทั้งหมด",
-          "count": 40,
-          "pressed": "true"
-        },
-        {
-          "cat": "toggle",
-          "label": "ก้อนหลัก/ส่วนเสริม",
-          "count": 6,
-          "pressed": "false"
-        },
-        {
-          "cat": "rule",
-          "label": "กฎการเขียน",
-          "count": 6,
-          "pressed": "false"
-        },
-        {
-          "cat": "command",
-          "label": "คำสั่ง",
-          "count": 7,
-          "pressed": "false"
-        },
-        {
-          "cat": "skill",
-          "label": "สกิล",
-          "count": 7,
-          "pressed": "false"
-        },
-        {
-          "cat": "cli",
-          "label": "CLI",
-          "count": 10,
-          "pressed": "false"
-        },
-        {
-          "cat": "proof",
-          "label": "ตัวเลข",
-          "count": 4,
-          "pressed": "false"
-        }
-      ]
-    },
     "status": "ทั้งหมด · 40 จาก 40 รายการ"
   },
   "index": {
@@ -88,7 +41,7 @@
   "footer": {
     "note": "",
     "meta": "caveman 4.0.1 · Apache-2.0",
-    "source": "ที่มา <code>github.com/JuliusBrussee/caveman</code> (Apache-2.0 · LICENSE-MIT สำหรับส่วนก่อน 3.0)"
+    "source": "ที่มา <a href=\"https://github.com/JuliusBrussee/caveman\" target=\"_blank\" rel=\"noreferrer\">GitHub &middot; JuliusBrussee/caveman</a> (Apache-2.0 · LICENSE-MIT สำหรับส่วนก่อน 3.0)"
   },
   "noscript": "หน้านี้ต้องใช้ JavaScript เพื่อแสดงรายการ 40 รายการ"
 }

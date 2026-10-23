@@ -2,6 +2,10 @@
 <html lang="th">
 <head>
 <meta charset="utf-8">
+<!-- Security: strict CSP — the site ships zero third-party resources, inline
+     script, or inline style, so nothing more than same-origin files is needed.
+     (security_best_practices_report.md F-01/F-06). -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; connect-src 'none'; form-action 'none'; base-uri 'none'">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Impeccable 4.7.0 — 24 คำสั่งและ 61 กฎตรวจสำหรับงาน UI">
 <title>impeccable — skillsheet 4.7.0</title>
@@ -27,7 +31,6 @@
   <section class="rail" aria-label="ค้นหาและกรองรายการ">
     <label for="search">ค้นหา</label>
     <input id="search" type="search" placeholder="ชื่อคำสั่ง โหมด หลักการ หรือกฎ" autocomplete="off" spellcheck="false">
-
 
     <nav class="flow-nav" aria-label="เส้นทางงาน">
       <p class="flow-nav-label">เส้นทางงาน</p>
@@ -91,11 +94,11 @@
 <footer class="foot">
   <span></span>
   <span class="foot-meta">impeccable 4.7.0 · Apache-2.0</span>
-  <span>ที่มา <code>mcps/impeccable</code> · github.com/pbakaus/impeccable (Apache-2.0)</span>
+  <span>ที่มา <code>mcps/impeccable</code> · <a href="https://github.com/pbakaus/impeccable" target="_blank" rel="noreferrer">GitHub &middot; pbakaus/impeccable</a> (Apache-2.0)</span>
 </footer>
 
 <noscript>
-  <p style="padding:24px">หน้านี้ต้องใช้ JavaScript เพื่อแสดงรายการ 52 รายการ</p>
+  <p class="noscript-plain">หน้านี้ต้องใช้ JavaScript เพื่อแสดงรายการ 52 รายการ</p>
 </noscript>
 
 <script src="../index.js" defer></script>

@@ -38,21 +38,6 @@ body.page-agent-skills-docs .lede {
     min-width: 16rem;
   }
 }
-body.page-agent-skills-docs #filters {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-  margin: 14px 0 0;
-}
-body.page-agent-skills-docs .filter-group-label {
-  flex-basis: 100%;
-  margin-top: 8px;
-  color: var(--muted);
-  font-family: var(--data);
-  font-size: 0.6875rem;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-}
 body.page-agent-skills-docs .flow-nav {
   margin-top: 22px;
   padding-top: 16px;
@@ -107,35 +92,6 @@ body.page-agent-skills-docs .flow-step small {
   color: var(--muted);
   font-family: var(--data);
   font-size: 0.6875rem;
-}
-body.page-agent-skills-docs .chip {
-  font: inherit;
-  font-size: 0.8125rem;
-  color: var(--ink);
-  background: transparent;
-  border: 1px solid var(--rule);
-  border-radius: 999px;
-  padding: 5px 11px;
-  cursor: pointer;
-  display: inline-flex;
-  align-items: baseline;
-  gap: 6px;
-  transition:
-    background-color 0.12s ease,
-    border-color 0.12s ease;
-}
-body.page-agent-skills-docs .chip:hover {
-  background: var(--panel);
-}
-body.page-agent-skills-docs .chip[aria-pressed="true"] {
-  background: var(--ink);
-  border-color: var(--ink);
-  color: var(--paper);
-}
-body.page-agent-skills-docs .chip .count {
-  font-family: var(--data);
-  font-size: 0.75rem;
-  opacity: 0.7;
 }
 body.page-agent-skills-docs .status {
   margin: 16px 0 0;
@@ -317,7 +273,6 @@ body.page-agent-skills-docs .note {
   line-height: 1.6;
 }
 @media (prefers-reduced-motion: reduce) {
-  body.page-agent-skills-docs .chip,
   body.page-agent-skills-docs .row::before {
     transition: none;
   }

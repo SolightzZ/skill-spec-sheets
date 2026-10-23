@@ -652,7 +652,6 @@
       }
     ],
     idKey: "id",
-    filters: "static",
     unit: "รายการ",
     catLabel: { skill: "สกิล", step: "ขั้นตอน", reference: "อ้างอิง" },
     collection: {

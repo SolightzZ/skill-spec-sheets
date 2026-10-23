@@ -626,7 +626,6 @@
       }
     ],
     idKey: "id",
-    filters: "static",
     unit: "รายการ",
     catLabel: { command: "คำสั่ง", concept: "หลักการ", system: "ระบบ", install: "ติดตั้ง" },
     collection: {

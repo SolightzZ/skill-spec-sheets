@@ -32,9 +32,6 @@
     "ariaLabel": "ค้นหาสกิลและหลักการ",
     "label": "ค้นหาสกิลและหลักการ",
     "placeholder": "ชื่อหลักการ ปัญหา หรือคำที่อยากทำ",
-    "filters": {
-      "mode": "none"
-    },
     "status": "ทั้งหมด · 5 จาก 5 รายการ"
   },
   "index": {
@@ -48,7 +45,7 @@
   "footer": {
     "note": "",
     "meta": "karpathy-guidelines 1.0.0 · MIT",
-    "source": "ที่มา <code>github.com/forrestchang/andrej-karpathy-skills</code> (MIT)"
+    "source": "ที่มา <a href=\"https://github.com/forrestchang/andrej-karpathy-skills\" target=\"_blank\" rel=\"noreferrer\">GitHub &middot; forrestchang/andrej-karpathy-skills</a> (MIT)"
   },
   "noscript": "หน้านี้ต้องใช้ JavaScript เพื่อแสดงสกิลและหลักการทั้ง 5 รายการ"
 }

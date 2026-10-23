@@ -28,43 +28,6 @@
     "ariaLabel": "ค้นหาและกรองรายการ",
     "label": "ค้นหา",
     "placeholder": "ชื่อคำสั่ง หลักการ หรือการติดตั้ง",
-    "filters": {
-      "mode": "static",
-      "className": "",
-      "ariaLabel": "กรองตามหมวด",
-      "chips": [
-        {
-          "cat": "all",
-          "label": "ทั้งหมด",
-          "count": 19,
-          "pressed": "true"
-        },
-        {
-          "cat": "command",
-          "label": "คำสั่ง",
-          "count": 6,
-          "pressed": "false"
-        },
-        {
-          "cat": "concept",
-          "label": "หลักการ",
-          "count": 7,
-          "pressed": "false"
-        },
-        {
-          "cat": "system",
-          "label": "ระบบ",
-          "count": 3,
-          "pressed": "false"
-        },
-        {
-          "cat": "install",
-          "label": "ติดตั้ง",
-          "count": 3,
-          "pressed": "false"
-        }
-      ]
-    },
     "status": "19 จาก 19 รายการ"
   },
   "index": {
@@ -78,7 +41,7 @@
   "footer": {
     "note": "",
     "meta": "ponytail 5.3.2 · MIT",
-    "source": "ที่มา <code>github.com/DietrichGebert/ponytail</code> (MIT)"
+    "source": "ที่มา <a href=\"https://github.com/DietrichGebert/ponytail\" target=\"_blank\" rel=\"noreferrer\">GitHub &middot; DietrichGebert/ponytail</a> (MIT)"
   },
   "noscript": "หน้านี้ต้องใช้ JavaScript เพื่อแสดงรายการ 19 รายการ"
 }

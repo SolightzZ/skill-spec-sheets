@@ -13,8 +13,6 @@
     if (document.body.getAttribute("data-docs-init") === "1") return;
     document.body.setAttribute("data-docs-init", "1");
 
-    var filters = document.getElementById("filters") || document.querySelector(".filters");
-    var filtersBy = config.secondary ? document.getElementById(config.secondary.el) : null;
     var flow = document.getElementById("flow");
     var status = document.getElementById("status");
     var empty = document.getElementById("empty");
@@ -29,7 +27,7 @@
     var match = config.match || NS.doc.match;
     var row = config.row || function (item, pressed) { return NS.doc.row(item, config, pressed); };
     var renderDoc = config.detail || function (item) { return NS.doc.render(item, config); };
-    var state = { q: "", cat: "all", by: "all", selected: null };
+    var state = { q: "", cat: "all", selected: null };
     var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
     var baseTitle = document.title;
 
@@ -54,7 +52,7 @@
       var params = new URLSearchParams(raw);
       var cat = params.get("cat");
       var item = params.get("item");
-      if (cat && (config.filters === "none" || data.some(function (x) { return x.cat === cat; }))) state.cat = cat;
+      if (cat && data.some(function (x) { return x.cat === cat; })) state.cat = cat;
       if (item && itemById(item)) state.selected = item;
     }
 
@@ -94,39 +92,9 @@
 
       return data.filter(function (item) {
         if (state.cat !== "all" && item.cat !== state.cat) return false;
-        if (config.secondary && state.by !== "all" && item[config.secondary.key] !== state.by) return false;
         if (!q) return true;
         return match(item, q, terms);
       });
-    }
-
-    function renderFilters() {
-      if (config.filters !== "dynamic" || !filters || !config.cats) return;
-
-      filters.innerHTML = config.cats.map(function (cat) {
-        var count = cat.id === "all" ? data.length : data.filter(function (item) {
-          return item.cat === cat.id;
-        }).length;
-        var pressed = state.cat === cat.id;
-        return '<button class="chip" type="button" data-cat="' + esc(cat.id) + '" aria-pressed="' + pressed + '">' +
-          esc(cat.label) + '<span class="n">' + count + "</span></button>";
-      }).join("");
-    }
-
-    function syncFilters() {
-      if (!filters) return;
-      var chips = filters.querySelectorAll(".chip");
-      for (var i = 0; i < chips.length; i++) {
-        chips[i].setAttribute("aria-pressed", String(chips[i].getAttribute("data-cat") === state.cat));
-      }
-    }
-
-    function syncSecondary() {
-      if (!filtersBy) return;
-      var chips = filtersBy.querySelectorAll(".chip");
-      for (var i = 0; i < chips.length; i++) {
-        chips[i].setAttribute("aria-pressed", String(chips[i].getAttribute(config.secondary.attr) === state.by));
-      }
     }
 
     function renderList() {
@@ -137,9 +105,8 @@
 
       if (empty) empty.hidden = rows.length !== 0;
       if (status) {
-        var activeChip = filters && filters.querySelector('[data-cat="' + CSS.escape(state.cat) + '"]');
         var activeStep = flowSteps().filter(function (step) { return step.id === state.cat; })[0];
-        var activeLabel = activeChip ? activeChip.childNodes[0].textContent.trim() : activeStep ? activeStep.label : "ทั้งหมด";
+        var activeLabel = activeStep ? activeStep.label : "ทั้งหมด";
         status.textContent = activeLabel + " · " + rows.length + " จาก " + data.length + " " + config.unit;
       }
     }
@@ -215,19 +182,6 @@
       }
     });
 
-    if (config.filters !== "none" && filters) {
-      filters.addEventListener("click", function (e) {
-        var chip = e.target.closest(".chip");
-        if (!chip) return;
-        state.cat = chip.getAttribute("data-cat");
-        state.selected = null;
-        writeHash();
-        renderFlow();
-        syncFilters();
-        renderList();
-      });
-    }
-
     if (flow) {
       flow.addEventListener("click", function (e) {
         var button = e.target.closest("[data-flow-cat]");
@@ -237,19 +191,8 @@
         resetSearch();
         writeHash();
         renderFlow();
-        syncFilters();
         renderList();
         search.focus({ preventScroll: true });
-      });
-    }
-
-    if (config.secondary && filtersBy) {
-      filtersBy.addEventListener("click", function (e) {
-        var chip = e.target.closest(".chip");
-        if (!chip) return;
-        state.by = chip.getAttribute(config.secondary.attr);
-        syncSecondary();
-        renderList();
       });
     }
 
@@ -263,7 +206,6 @@
         resetSearch();
         writeHash();
         renderFlow();
-        syncFilters();
         renderList();
         renderDetail();
         return;
@@ -315,15 +257,12 @@
       state.selected = null;
       readHash();
       renderFlow();
-      syncFilters();
       renderList();
       renderDetail();
     });
 
     readHash();
-    if (config.filters === "dynamic") renderFilters();
     renderFlow();
-    syncFilters();
     renderList();
     renderDetail();
   }

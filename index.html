@@ -2,6 +2,8 @@
 <html lang="th">
 <head>
 <meta charset="utf-8">
+<!-- Security: strict CSP (see security_best_practices_report.md F-01). -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; connect-src 'none'; form-action 'none'; base-uri 'none'">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="ดัชนีเอกสาร skill และ MCP ทั้ง 12 ชุด ใช้ธีมและตัวค้นหาร่วมกันผ่าน index.css และ index.js">
 <title>Docs index — skills &amp; MCP</title>
@@ -20,72 +22,110 @@
   <h2 class="home-heading">
     <span>เลือกชุดเอกสาร</span>
   </h2>
+  <!-- เรียงตามจำนวนดาว GitHub มาก → น้อย (ตรวจ 2026-10-23 ผ่าน 12 repo ต้นทาง) -->
   <div class="home-grid">
-    <a class="home-link" href="./apps/agent-skills-docs.html">
-      <span class="name"><img class="collection-logo" src="./assets/logos/agent-skills.png" alt="" width="40" height="40">Agent Skills</span>
-      <span class="desc"><code>using-agent-skills</code> เลือก workflow ตามขั้นตอนงาน: ตั้งโจทย์ วางแผน สร้าง ตรวจ และปล่อยงาน</span>
-      <span class="meta">38 items · 9 commands</span>
-    </a>
-    <a class="home-link" href="./apps/andrej-karpathy-skills-docs.html">
-      <span class="name"><img class="collection-logo" src="./assets/logos/karpathy.png" alt="" width="40" height="40">Karpathy Guidelines</span>
-      <span class="desc">4 หลักการลดการเดา คิดเกิน แก้เกิน และงานไร้เกณฑ์</span>
-      <span class="meta">1 skill · 4 rules</span>
-    </a>
-    <a class="home-link" href="./apps/caveman-docs.html">
-      <span class="name"><img class="collection-logo" src="./assets/logos/caveman.png" alt="" width="40" height="40">Caveman</span>
-      <span class="desc">สวิตช์ กฎ คำสั่ง และ CLI สำหรับ agent ที่พูดน้อย</span>
-      <span class="meta">40 items · 7 commands</span>
-    </a>
-    <a class="home-link" href="./apps/graphify-docs.html">
-      <span class="name"><img class="collection-logo" src="./assets/logos/graphify.svg" alt="" width="40" height="40">Graphify</span>
-      <span class="desc">สร้างและถาม knowledge graph จากโค้ด เอกสาร รูป และวิดีโอ</span>
-      <span class="meta">16 commands · pipeline → export</span>
-    </a>
-    <a class="home-link" href="./apps/impeccable-docs.html">
-      <span class="name"><img class="collection-logo" src="./assets/logos/impeccable.svg" alt="" width="40" height="40">Impeccable</span>
-      <span class="desc">ออกแบบและตรวจ UI ด้วยคำสั่ง โหมด กฎ และ CLI</span>
-      <span class="meta">52 items · 29 commands</span>
-    </a>
-    <a class="home-link" href="./apps/matt-pocock-docs.html">
-      <span class="name"><img class="collection-logo" src="./assets/logos/matt-pocock.png" alt="" width="40" height="40">Matt Pocock&rsquo;s Skills</span>
-      <span class="desc">38 skills จาก repo จริง: plugin 27 และติดตั้งเอง 11</span>
-      <span class="meta">38 skills · 27 plugin</span>
-    </a>
-    <a class="home-link" href="./apps/Model-Context-Protocol-servers-docs.html">
-      <span class="name"><img class="collection-logo" src="./assets/logos/mcp.png" alt="" width="40" height="40">MCP Servers</span>
-      <span class="desc">7 servers สำหรับอ่านไฟล์ ค้นเว็บ จำบริบท และคิดเป็นขั้นตอน</span>
-      <span class="meta">7 servers · reference set</span>
-    </a>
-    <a class="home-link" href="./apps/ponytail-docs.html">
-      <span class="name"><img class="collection-logo" src="./assets/logos/ponytail.png" alt="" width="40" height="40">Ponytail</span>
-      <span class="desc">skills สำหรับงาน senior dev พร้อมคำสั่งและ benchmark</span>
-      <span class="meta">19 items · 6 commands</span>
-    </a>
-    <a class="home-link" href="./apps/security-audit-skill-docs.html">
-      <span class="name"><img class="collection-logo" src="./assets/logos/security-audit.png" alt="" width="40" height="40">Security Audit</span>
-      <span class="desc">ตรวจ security ตั้งแต่ boundary ถึงรายงานที่ตรวจซ้ำได้</span>
-      <span class="meta">7 items · 6 phases</span>
-    </a>
-    <a class="home-link" href="./apps/superpowers-docs.html">
-      <span class="name"><img class="collection-logo" src="./assets/logos/superpowers.svg" alt="" width="40" height="40">Superpowers</span>
-      <span class="desc"><code>using-superpowers</code> เลือก skill ก่อนทำงาน; รวม 15 skills สำหรับกระบวนการ โค้ด และพื้นฐาน</span>
-      <span class="meta">15 skills · กระบวนการ / โค้ด / พื้นฐาน</span>
-    </a>
-    <a class="home-link" href="./apps/taste-skill-docs.html">
-      <span class="name"><img class="collection-logo" src="./assets/logos/taste-skill.png" alt="" width="40" height="40">Taste Skill</span>
-      <span class="desc">สร้าง design direction จากวัตถุดิบจริง พร้อมด่านตรวจและรอบแก้</span>
-      <span class="meta">12 items · 10 steps</span>
-    </a>
-    <a class="home-link" href="./apps/ui-ux-pro-max-skill-docs.html">
-      <span class="name"><img class="collection-logo" src="./assets/logos/ui-ux-pro-max.svg" alt="" width="40" height="40">UI UX Pro Max</span>
-      <span class="desc">ค้น design system, styles, UX rules และแนวทางตามเทคโนโลยี</span>
-      <span class="meta">19 items · 7 skills</span>
-    </a>
+    <div class="home-link">
+      <a class="home-card" href="./apps/superpowers-docs.html" title="obra/superpowers · 303,983 stars">
+        <span class="name"><img class="collection-logo" src="./assets/logos/superpowers.svg" alt="" width="40" height="40">Superpowers</span>
+        <span class="desc"><code>using-superpowers</code> เลือก skill ก่อนทำงาน; รวม 15 skills สำหรับกระบวนการ โค้ด และพื้นฐาน</span>
+        <span class="meta">★ 303,983 · 15 skills · กระบวนการ / โค้ด / พื้นฐาน</span>
+      </a>
+      <a class="home-src" href="https://github.com/obra/superpowers" target="_blank" rel="noreferrer">GitHub · obra/superpowers</a>
+    </div>
+    <div class="home-link">
+      <a class="home-card" href="./apps/matt-pocock-docs.html" title="mattpocock/skills · 301,393 stars">
+        <span class="name"><img class="collection-logo" src="./assets/logos/matt-pocock.png" alt="" width="40" height="40">Matt Pocock&rsquo;s Skills</span>
+        <span class="desc">38 skills จาก repo จริง: plugin 27 และติดตั้งเอง 11</span>
+        <span class="meta">★ 301,393 · 38 skills · 27 plugin</span>
+      </a>
+      <a class="home-src" href="https://github.com/mattpocock/skills" target="_blank" rel="noreferrer">GitHub · mattpocock/skills</a>
+    </div>
+    <div class="home-link">
+      <a class="home-card" href="./apps/andrej-karpathy-skills-docs.html" title="forrestchang/andrej-karpathy-skills · 222,730 stars">
+        <span class="name"><img class="collection-logo" src="./assets/logos/karpathy.png" alt="" width="40" height="40">Karpathy Guidelines</span>
+        <span class="desc">4 หลักการลดการเดา คิดเกิน แก้เกิน และงานไร้เกณฑ์</span>
+        <span class="meta">★ 222,730 · 1 skill · 4 rules</span>
+      </a>
+      <a class="home-src" href="https://github.com/forrestchang/andrej-karpathy-skills" target="_blank" rel="noreferrer">GitHub · forrestchang/andrej-karpathy-skills</a>
+    </div>
+    <div class="home-link">
+      <a class="home-card" href="./apps/ponytail-docs.html" title="DietrichGebert/ponytail · 174,337 stars">
+        <span class="name"><img class="collection-logo" src="./assets/logos/ponytail.png" alt="" width="40" height="40">Ponytail</span>
+        <span class="desc">skills สำหรับงาน senior dev พร้อมคำสั่งและ benchmark</span>
+        <span class="meta">★ 174,337 · 19 items · 6 commands</span>
+      </a>
+      <a class="home-src" href="https://github.com/DietrichGebert/ponytail" target="_blank" rel="noreferrer">GitHub · DietrichGebert/ponytail</a>
+    </div>
+    <div class="home-link">
+      <a class="home-card" href="./apps/ui-ux-pro-max-skill-docs.html" title="nextlevelbuilder/ui-ux-pro-max-skill · 139,223 stars">
+        <span class="name"><img class="collection-logo" src="./assets/logos/ui-ux-pro-max.svg" alt="" width="40" height="40">UI UX Pro Max</span>
+        <span class="desc">ค้น design system, styles, UX rules และแนวทางตามเทคโนโลยี</span>
+        <span class="meta">★ 139,223 · 19 items · 7 skills</span>
+      </a>
+      <a class="home-src" href="https://github.com/nextlevelbuilder/ui-ux-pro-max-skill" target="_blank" rel="noreferrer">GitHub · nextlevelbuilder/ui-ux-pro-max-skill</a>
+    </div>
+    <div class="home-link">
+      <a class="home-card" href="./apps/graphify-docs.html" title="Graphify-Labs/graphify · 133,543 stars">
+        <span class="name"><img class="collection-logo" src="./assets/logos/graphify.svg" alt="" width="40" height="40">Graphify</span>
+        <span class="desc">สร้างและถาม knowledge graph จากโค้ด เอกสาร รูป และวิดีโอ</span>
+        <span class="meta">★ 133,543 · 16 commands · pipeline → export</span>
+      </a>
+      <a class="home-src" href="https://github.com/Graphify-Labs/graphify" target="_blank" rel="noreferrer">GitHub · Graphify-Labs/graphify</a>
+    </div>
+    <div class="home-link">
+      <a class="home-card" href="./apps/caveman-docs.html" title="JuliusBrussee/caveman · 114,524 stars">
+        <span class="name"><img class="collection-logo" src="./assets/logos/caveman.png" alt="" width="40" height="40">Caveman</span>
+        <span class="desc">สวิตช์ กฎ คำสั่ง และ CLI สำหรับ agent ที่พูดน้อย</span>
+        <span class="meta">★ 114,524 · 40 items · 7 commands</span>
+      </a>
+      <a class="home-src" href="https://github.com/JuliusBrussee/caveman" target="_blank" rel="noreferrer">GitHub · JuliusBrussee/caveman</a>
+    </div>
+    <div class="home-link">
+      <a class="home-card" href="./apps/agent-skills-docs.html" title="addyosmani/agent-skills · 109,798 stars">
+        <span class="name"><img class="collection-logo" src="./assets/logos/agent-skills.png" alt="" width="40" height="40">Agent Skills</span>
+        <span class="desc"><code>using-agent-skills</code> เลือก workflow ตามขั้นตอนงาน: ตั้งโจทย์ วางแผน สร้าง ตรวจ และปล่อยงาน</span>
+        <span class="meta">★ 109,798 · 38 items · 9 commands</span>
+      </a>
+      <a class="home-src" href="https://github.com/addyosmani/agent-skills" target="_blank" rel="noreferrer">GitHub · addyosmani/agent-skills</a>
+    </div>
+    <div class="home-link">
+      <a class="home-card" href="./apps/taste-skill-docs.html" title="Leonxlnx/taste-skill · 101,386 stars">
+        <span class="name"><img class="collection-logo" src="./assets/logos/taste-skill.png" alt="" width="40" height="40">Taste Skill</span>
+        <span class="desc">สร้าง design direction จากวัตถุดิบจริง พร้อมด่านตรวจและรอบแก้</span>
+        <span class="meta">★ 101,386 · 12 items · 10 steps</span>
+      </a>
+      <a class="home-src" href="https://github.com/Leonxlnx/taste-skill" target="_blank" rel="noreferrer">GitHub · Leonxlnx/taste-skill</a>
+    </div>
+    <div class="home-link">
+      <a class="home-card" href="./apps/Model-Context-Protocol-servers-docs.html" title="modelcontextprotocol/servers · 91,510 stars">
+        <span class="name"><img class="collection-logo" src="./assets/logos/mcp.png" alt="" width="40" height="40">MCP Servers</span>
+        <span class="desc">7 servers สำหรับอ่านไฟล์ ค้นเว็บ จำบริบท และคิดเป็นขั้นตอน</span>
+        <span class="meta">★ 91,510 · 7 servers · reference set</span>
+      </a>
+      <a class="home-src" href="https://github.com/modelcontextprotocol/servers" target="_blank" rel="noreferrer">GitHub · modelcontextprotocol/servers</a>
+    </div>
+    <div class="home-link">
+      <a class="home-card" href="./apps/impeccable-docs.html" title="pbakaus/impeccable · 85,237 stars">
+        <span class="name"><img class="collection-logo" src="./assets/logos/impeccable.svg" alt="" width="40" height="40">Impeccable</span>
+        <span class="desc">ออกแบบและตรวจ UI ด้วยคำสั่ง โหมด กฎ และ CLI</span>
+        <span class="meta">★ 85,237 · 52 items · 29 commands</span>
+      </a>
+      <a class="home-src" href="https://github.com/pbakaus/impeccable" target="_blank" rel="noreferrer">GitHub · pbakaus/impeccable</a>
+    </div>
+    <div class="home-link">
+      <a class="home-card" href="./apps/security-audit-skill-docs.html" title="cloudflare/security-audit-skill · 40,733 stars">
+        <span class="name"><img class="collection-logo" src="./assets/logos/security-audit.png" alt="" width="40" height="40">Security Audit</span>
+        <span class="desc">ตรวจ security ตั้งแต่ boundary ถึงรายงานที่ตรวจซ้ำได้</span>
+        <span class="meta">★ 40,733 · 7 items · 6 phases</span>
+      </a>
+      <a class="home-src" href="https://github.com/cloudflare/security-audit-skill" target="_blank" rel="noreferrer">GitHub · cloudflare/security-audit-skill</a>
+    </div>
   </div>
 </main>
 
 <footer class="foot">
   <span>12 sheets · Thai / English</span>
+  <a class="foot-link" href="https://github.com/SolightzZ/skill-spec-sheets" target="_blank" rel="noreferrer">GitHub · SolightzZ/skill-spec-sheets</a>
 </footer>
 
 <script src="./index.js" defer></script>

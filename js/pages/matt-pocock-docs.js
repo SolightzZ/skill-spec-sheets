@@ -1578,7 +1578,6 @@
       }
     ],
     idKey: "id",
-    filters: "static",
     unit: "ทักษะ",
     catLabel: {
       engineering: "Engineering",

@@ -6,7 +6,6 @@
 NS.pages["<stem>"] = {
   data: [item, ...],
   idKey: "id",
-  filters: "static" | "dynamic" | "none",
   unit: "ทักษะ",
   catLabel: { catId: "ป้ายไทย" },
   collection: { repo, version, license, verifiedAt },
@@ -19,7 +18,7 @@ NS.pages["<stem>"] = {
 | field | type | จำเป็น | หมายเหตุ |
 |---|---|---|---|
 | `id` | string | yes | ต้องไม่ซ้ำ ใช้เป็น hash `#<id>` |
-| `cat` | string | yes | ต้องตรงกับ chip หรือ `cats` |
+| `cat` | string | yes | รหัสหมวดหมู่สำหรับเส้นทางงานและป้ายกำกับ |
 | `type` | string | yes | `skill`, `command`, `cli`, `server`, `agent`, `concept`, `rule` |
 | `name` | string | yes | ชื่อที่แสดง ใช้ชื่อจริงจาก repo |
 | `summary` | string | yes | 1 บรรทัด สำหรับ list row |
@@ -46,4 +45,4 @@ NS.pages["<stem>"] = {
 - ทุกข้อความภาษาไทย ศัพท์เทคนิคคงภาษาอังกฤษ
 - ห้ามแต่งคำสั่ง ตัวเลข หรือ path ที่ไม่มีใน repo
 - `sourcePath` ต้องมีไฟล์จริงใน clone ใต้ `../<repo>/`
-- เพิ่ม/ลบ item แล้วต้องอัปเดต `components/pages/<stem>/data.json`: chip count, `rail.status`, `noscript`, stamp ที่เกี่ยวกับจำนวน
+- เพิ่ม/ลบ item แล้วต้องอัปเดต `components/pages/<stem>/data.json`: `rail.status`, `noscript`, stamp ที่เกี่ยวกับจำนวน

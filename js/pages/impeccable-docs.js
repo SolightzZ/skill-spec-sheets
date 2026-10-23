@@ -1689,7 +1689,6 @@
       }
     ],
     idKey: "id",
-    filters: "static",
     unit: "รายการ",
     catLabel: {
       command: "คำสั่ง",

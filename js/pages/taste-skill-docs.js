@@ -320,7 +320,6 @@
       }
     ],
     idKey: "id",
-    filters: "none",
     unit: "ขั้น",
     catLabel: {
       setup: "ติดตั้งและเรียกใช้",

@@ -2,6 +2,10 @@
 <html lang="th">
 <head>
 <meta charset="utf-8">
+<!-- Security: strict CSP — the site ships zero third-party resources, inline
+     script, or inline style, so nothing more than same-origin files is needed.
+     (security_best_practices_report.md F-01/F-06). -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; connect-src 'none'; form-action 'none'; base-uri 'none'">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="security-audit skill — 6 phases และรายงานที่ตรวจซ้ำได้">
 <title>security audit — audit sheet</title>
@@ -27,7 +31,6 @@
   <section class="rail" aria-label="ค้นหาและติดตั้ง">
     <label for="search">ค้นหาเฟส</label>
     <input id="search" type="search" placeholder="security-audit recon hunting schema report" autocomplete="off" spellcheck="false">
-
 
     <nav class="flow-nav" aria-label="เส้นทางงาน">
       <p class="flow-nav-label">เส้นทางงาน</p>
@@ -82,11 +85,11 @@
 <footer class="foot">
   <span></span>
   <span class="foot-meta">security-audit c1c8a8c · MIT</span>
-  <span>ที่มา <code>github.com/cloudflare/security-audit-skill</code> · MIT</span>
+  <span>ที่มา <a href="https://github.com/cloudflare/security-audit-skill" target="_blank" rel="noreferrer">GitHub &middot; cloudflare/security-audit-skill</a> · MIT</span>
 </footer>
 
 <noscript>
-  <p style="padding:24px">หน้านี้ต้องใช้ JavaScript เพื่อแสดง 7 รายการ: security-audit skill และ 6 เฟส</p>
+  <p class="noscript-plain">หน้านี้ต้องใช้ JavaScript เพื่อแสดง 7 รายการ: security-audit skill และ 6 เฟส</p>
 </noscript>
 
 <script src="../index.js" defer></script>

@@ -16,7 +16,13 @@ node tools/build-pages.cjs --check
 node tools/check-docs.cjs
 ```
 
-The build step composes the page shell with the shared components and page data. The check step validates schemas, IDs, counts, examples, and source paths.
+The build step composes the page shell with the shared components and page data. The check step validates schemas, IDs, counts, examples, the `PAGE_FILES` list in `index.js`, and source paths.
+
+Source-path checks need the upstream clones next to this repo, or a path given via `DOCS_SOURCE_ROOT`. When a clone is missing the check is skipped with one warning per repo, so a fresh checkout can still validate the data.
+
+## CI
+
+`.github/workflows/main.yml` runs `node --check` on every JS/CJS file, `node tools/build-pages.cjs --check`, and `node tools/check-docs.cjs` on pushes and pull requests to `main`.
 
 ## Project layout
 

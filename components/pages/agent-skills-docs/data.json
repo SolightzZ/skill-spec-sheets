@@ -28,71 +28,6 @@
     "ariaLabel": "ค้นหาและกรอง",
     "label": "ค้นหา",
     "placeholder": "ชื่อหรือสิ่งที่อยากทำ",
-    "filters": {
-      "mode": "static",
-      "chips": [
-        {
-          "cat": "all",
-          "label": "ทั้งหมด",
-          "count": 38,
-          "pressed": "true"
-        },
-        {
-          "cat": "define",
-          "label": "นิยาม",
-          "count": 4,
-          "pressed": "false"
-        },
-        {
-          "cat": "plan",
-          "label": "วางแผน",
-          "count": 1,
-          "pressed": "false"
-        },
-        {
-          "cat": "build",
-          "label": "สร้าง",
-          "count": 7,
-          "pressed": "false"
-        },
-        {
-          "cat": "verify",
-          "label": "พิสูจน์",
-          "count": 2,
-          "pressed": "false"
-        },
-        {
-          "cat": "review",
-          "label": "ตรวจ",
-          "count": 4,
-          "pressed": "false"
-        },
-        {
-          "cat": "ship",
-          "label": "ปล่อย",
-          "count": 6,
-          "pressed": "false"
-        },
-        {
-          "cat": "meta",
-          "label": "พื้นฐาน",
-          "count": 1,
-          "pressed": "false"
-        },
-        {
-          "cat": "command",
-          "label": "คำสั่ง",
-          "count": 9,
-          "pressed": "false"
-        },
-        {
-          "cat": "agent",
-          "label": "บทบาท",
-          "count": 4,
-          "pressed": "false"
-        }
-      ]
-    },
     "status": "38 จาก 38 รายการ"
   },
   "index": {
@@ -106,7 +41,7 @@
   "footer": {
     "note": "",
     "meta": "",
-    "source": "ที่มา <code>github.com/addyosmani/agent-skills</code> · <a href=\"https://skills.addy.ie/\" target=\"_blank\" rel=\"noreferrer\">เว็บไซต์หลัก</a>"
+    "source": "ที่มา <a href=\"https://github.com/addyosmani/agent-skills\" target=\"_blank\" rel=\"noreferrer\">GitHub &middot; addyosmani/agent-skills</a> · <a href=\"https://skills.addy.ie/\" target=\"_blank\" rel=\"noreferrer\">เว็บไซต์หลัก</a>"
   },
   "noscript": "หน้านี้ต้องใช้ JavaScript เพื่อแสดงรายการ 38 รายการ"
 }

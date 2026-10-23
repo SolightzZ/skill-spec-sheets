@@ -365,7 +365,6 @@
       }
     ],
     idKey: "id",
-    filters: "static",
     unit: "เซิร์ฟเวอร์",
     catLabel: { files: "ไฟล์และโค้ด", context: "เว็บและเวลา", mind: "ความจำและการคิด", protocol: "ทดสอบโปรโตคอล" },
     collection: {

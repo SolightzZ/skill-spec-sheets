@@ -562,7 +562,6 @@
       }
     ],
     idKey: "id",
-    filters: "static",
     unit: "ทักษะ",
     catLabel: { process: "กระบวนการ", code: "โค้ด", meta: "พื้นฐาน" },
     collection: {

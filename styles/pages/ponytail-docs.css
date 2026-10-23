@@ -37,41 +37,6 @@ body.page-ponytail-docs .lede {
     min-width: 16rem;
   }
 }
-body.page-ponytail-docs #filters {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-  margin: 14px 0 0;
-}
-body.page-ponytail-docs .chip {
-  font: inherit;
-  font-size: 0.8125rem;
-  color: var(--ink);
-  background: transparent;
-  border: 1px solid var(--rule);
-  border-radius: 999px;
-  padding: 5px 11px;
-  cursor: pointer;
-  display: inline-flex;
-  align-items: baseline;
-  gap: 6px;
-  transition:
-    background-color 0.12s ease,
-    border-color 0.12s ease;
-}
-body.page-ponytail-docs .chip:hover {
-  background: var(--panel);
-}
-body.page-ponytail-docs .chip[aria-pressed="true"] {
-  background: var(--ink);
-  border-color: var(--ink);
-  color: var(--paper);
-}
-body.page-ponytail-docs .chip .count {
-  font-family: var(--data);
-  font-size: 0.75rem;
-  opacity: 0.7;
-}
 body.page-ponytail-docs .status {
   margin: 16px 0 0;
   font-size: 0.8125rem;
@@ -163,7 +128,6 @@ body.page-ponytail-docs .fm div {
   border-bottom: 1px solid var(--rule);
 }
 @media (prefers-reduced-motion: reduce) {
-  body.page-ponytail-docs .chip,
   body.page-ponytail-docs .row::before {
     transition: none;
   }

@@ -211,7 +211,6 @@
       }
     ],
     idKey: "id",
-    filters: "static",
     unit: "รายการ",
     catLabel: { start: "เริ่มต้น", map: "วางแผน", hunt: "ล่าช่องโหว่", verify: "ตรวจสอบ", report: "รายงาน" },
     collection: {
