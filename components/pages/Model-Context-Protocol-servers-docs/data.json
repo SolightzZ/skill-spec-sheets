@@ -29,7 +29,7 @@
     "label": "ค้นหาเซิร์ฟเวอร์",
     "placeholder": "ชื่อเซิร์ฟเวอร์ หรือเครื่องมือ",
     "filters": {
-      "mode": "none",
+      "mode": "static",
       "className": "",
       "ariaLabel": "กรองตามหมวด",
       "chips": [

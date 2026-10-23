@@ -15,7 +15,7 @@
         "value": "79"
       },
       {
-          "label": "เทคโนโลยี",
+        "label": "เทคโนโลยี",
         "value": "22"
       },
       {
@@ -29,7 +29,7 @@
     "label": "ค้นหาสกิลและขั้นตอน",
     "placeholder": "design system persist stack ux",
     "filters": {
-      "mode": "none",
+      "mode": "static",
       "className": "",
       "ariaLabel": "กรองตามหมวด",
       "chips": [

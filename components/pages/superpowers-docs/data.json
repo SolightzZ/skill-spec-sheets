@@ -29,7 +29,7 @@
     "label": "ค้นหาทักษะ",
     "placeholder": "ชื่อ หรือสิ่งที่อยากทำ",
     "filters": {
-      "mode": "none",
+      "mode": "static",
       "className": "",
       "ariaLabel": "กรองตามหมวด",
       "chips": [

@@ -29,7 +29,51 @@
     "label": "ค้นหา",
     "placeholder": "ชื่อสวิตช์ คำสั่ง หรือตัวเลข",
     "filters": {
-      "mode": "none"
+      "mode": "static",
+      "chips": [
+        {
+          "cat": "all",
+          "label": "ทั้งหมด",
+          "count": 40,
+          "pressed": "true"
+        },
+        {
+          "cat": "toggle",
+          "label": "ก้อนหลัก/ส่วนเสริม",
+          "count": 6,
+          "pressed": "false"
+        },
+        {
+          "cat": "rule",
+          "label": "กฎการเขียน",
+          "count": 6,
+          "pressed": "false"
+        },
+        {
+          "cat": "command",
+          "label": "คำสั่ง",
+          "count": 7,
+          "pressed": "false"
+        },
+        {
+          "cat": "skill",
+          "label": "สกิล",
+          "count": 7,
+          "pressed": "false"
+        },
+        {
+          "cat": "cli",
+          "label": "CLI",
+          "count": 10,
+          "pressed": "false"
+        },
+        {
+          "cat": "proof",
+          "label": "ตัวเลข",
+          "count": 4,
+          "pressed": "false"
+        }
+      ]
     },
     "status": "ทั้งหมด · 40 จาก 40 รายการ"
   },

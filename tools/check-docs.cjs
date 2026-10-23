@@ -15,7 +15,7 @@ const vm = require("vm");
 const ROOT = path.resolve(__dirname, "..");
 const PAGES = path.join(ROOT, "js", "pages");
 const DATA = path.join(ROOT, "components", "pages");
-const REPOS = path.resolve(ROOT, "..");
+const REPOS = process.env.DOCS_SOURCE_ROOT ? path.resolve(process.env.DOCS_SOURCE_ROOT) : path.resolve(ROOT, "..");
 
 const REPO_DIR = {
   "agent-skills-docs": "agent-skills",
@@ -43,13 +43,39 @@ for (const file of ["js/core/escape.js", "js/core/render.js"]) {
 
 const errors = [];
 const warnings = [];
+const missingSources = new Set();
 
 function fail(page, message) {
   errors.push(page + ": " + message);
 }
 
+/*
+ * Source-path checks need the upstream clones next to this repo. When a clone is
+ * absent (fresh checkout in CI) the check is skipped with one warning per repo
+ * instead of failing on every item. Set DOCS_SOURCE_ROOT to check a different tree.
+ */
+function sourcePathExists(stem, file) {
+  const dir = REPO_DIR[stem];
+  if (!dir) return true;
+
+  const base = path.join(REPOS, dir);
+  if (!fs.existsSync(base)) {
+    if (!missingSources.has(dir)) {
+      missingSources.add(dir);
+      warnings.push("source clone not found: " + base +
+        " — path checks for " + dir + " skipped (set DOCS_SOURCE_ROOT to point at the clones)");
+    }
+    return true;
+  }
+
+  return fs.existsSync(path.join(base, file));
+}
+
+const pageStems = [];
+
 for (const file of fs.readdirSync(PAGES).filter((name) => name.endsWith(".js")).sort()) {
   const stem = file.replace(/\.js$/, "");
+  pageStems.push(stem);
   const source = fs.readFileSync(path.join(PAGES, file), "utf8");
   const pageSandbox = { window: { DocsIndex: { esc: sandbox.window.DocsIndex.esc, doc: sandbox.window.DocsIndex.doc } } };
   vm.createContext(pageSandbox);
@@ -105,14 +131,14 @@ for (const file of fs.readdirSync(PAGES).filter((name) => name.endsWith(".js")).
       const blob = /^https:\/\/github\.com\/[^/]+\/[^/]+\/(?:blob|tree)\/[^/]+\/(.+)$/.exec((ref.href || "").split("#")[0]);
       if (repoDir && blob) {
         const rel = decodeURIComponent(blob[1]);
-        if (!fs.existsSync(path.join(REPOS, repoDir, rel))) {
+        if (!sourcePathExists(stem, rel)) {
           fail(stem + "#" + id, "ref path not found in " + repoDir + ": " + rel);
         }
       }
     });
 
     const repoDir = REPO_DIR[stem];
-    if (repoDir && item.sourcePath && !fs.existsSync(path.join(REPOS, repoDir, item.sourcePath))) {
+    if (repoDir && item.sourcePath && !sourcePathExists(stem, item.sourcePath)) {
       fail(stem + "#" + id, "sourcePath not found in " + repoDir + ": " + item.sourcePath);
     }
 
@@ -143,6 +169,11 @@ for (const file of fs.readdirSync(PAGES).filter((name) => name.endsWith(".js")).
   }
   if (data.stem !== stem) fail(stem, "data.json stem is " + data.stem);
 
+  const filtersMode = (data.rail && data.rail.filters && data.rail.filters.mode) || "none";
+  if (filtersMode !== config.filters) {
+    fail(stem, "data.json filters.mode is " + filtersMode + ", page module filters is " + config.filters);
+  }
+
   const chips = (data.rail && data.rail.filters && data.rail.filters.chips) || [];
   if (config.filters === "static") {
     if (!chips.length) fail(stem, "static filters but no chips in data.json");
@@ -170,6 +201,28 @@ for (const file of fs.readdirSync(PAGES).filter((name) => name.endsWith(".js")).
 
   console.log(stem + ": " + config.data.length + " items, " +
     Object.keys(cats).sort().map((cat) => cat + "=" + cats[cat]).join(" "));
+}
+
+/*
+ * The loader in index.js is the only thing that wires a page module into a
+ * page, so a module that is not registered (or registered under a wrong stem)
+ * would silently never load.
+ */
+const loader = fs.readFileSync(path.join(ROOT, "index.js"), "utf8");
+const registered = new Map();
+for (const match of loader.matchAll(/"([^"]+)":\s*"\.\/js\/pages\/([^"]+)\.js"/g)) {
+  registered.set(match[1], match[2]);
+}
+
+for (const [stem, file] of registered) {
+  if (stem !== file) fail("index.js", "PAGE_FILES maps " + stem + " to " + file + ".js");
+  if (!pageStems.includes(stem)) fail("index.js", "PAGE_FILES lists " + stem + " but js/pages/" + stem + ".js was not found");
+}
+for (const stem of pageStems) {
+  if (!registered.has(stem)) fail("index.js", "PAGE_FILES is missing " + stem);
+}
+for (const dir of fs.readdirSync(DATA).filter((name) => fs.statSync(path.join(DATA, name)).isDirectory())) {
+  if (!pageStems.includes(dir)) fail("components/pages", dir + " has no matching js/pages/" + dir + ".js");
 }
 
 if (warnings.length) {

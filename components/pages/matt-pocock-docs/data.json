@@ -29,14 +29,14 @@
     "label": "ค้นหาทักษะ",
     "placeholder": "ชื่อ หรือสิ่งที่อยากทำ",
     "filters": {
-      "mode": "none",
+      "mode": "static",
       "className": "filters",
       "ariaLabel": "กรองตามหมวด",
       "chips": [
         {
           "cat": "all",
           "label": "ทั้งหมด",
-          "count": 38,
+          "count": 27,
           "pressed": "true"
         },
         {
@@ -50,22 +50,10 @@
           "label": "Productivity",
           "count": 7,
           "pressed": "false"
-        },
-        {
-          "cat": "misc",
-          "label": "Misc",
-          "count": 4,
-          "pressed": "false"
-        },
-        {
-          "cat": "in-progress",
-          "label": "In progress",
-          "count": 7,
-          "pressed": "false"
         }
       ]
     },
-    "status": "38 จาก 38 ทักษะ"
+    "status": "27 จาก 27 ทักษะ"
   },
   "index": {
     "ariaLabel": "รายการทักษะ",
@@ -80,5 +68,5 @@
     "meta": "mattpocock-skills 1.3.1 · MIT",
     "source": "ที่มา <code>github.com/mattpocock/skills</code> (MIT)"
   },
-  "noscript": "หน้านี้ต้องใช้ JavaScript เพื่อแสดงรายการ 38 ทักษะ"
+  "noscript": "หน้านี้ต้องใช้ JavaScript เพื่อแสดงรายการ 27 ทักษะ"
 }
