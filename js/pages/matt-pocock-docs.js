@@ -1,17 +1,17 @@
 /* Page module: matt-pocock-docs. Verified against aihero.dev/skills and mattpocock/skills (2026-10-23). */
 (function () {
   "use strict";
-  var NS = window.DocsIndex = window.DocsIndex || {};
+  const NS = window.DocsIndex = window.DocsIndex || {};
   NS.pages = NS.pages || {};
 
-  var REPO = "https://github.com/mattpocock/skills";
-  var SITE = "https://www.aihero.dev/skills";
+  const REPO = "https://github.com/mattpocock/skills";
+  const SITE = "https://www.aihero.dev/skills";
 
-  var SHIPPED = "อยู่ในชุด 27 skills ที่หน้า AI Hero แสดง และติดตั้งผ่าน skills CLI หรือ Claude plugin ได้";
-  var IN_PROGRESS = "รายการเก่าจาก source repo ที่ไม่อยู่ใน AI Hero catalog ปัจจุบัน";
-  var IN_PROGRESS_CAUTION = "ไม่แสดงใน catalog ปัจจุบัน; ตรวจ source repo ก่อนติดตั้ง";
-  var MISC = "รายการเก่าจาก source repo ที่ไม่อยู่ใน AI Hero catalog ปัจจุบัน";
-  var MISC_CAUTION = "ไม่แสดงใน catalog ปัจจุบัน; ตรวจ source repo ก่อนติดตั้ง";
+  const SHIPPED = "อยู่ในชุด 27 skills ที่หน้า AI Hero แสดง และติดตั้งผ่าน skills CLI หรือ Claude plugin ได้";
+  const IN_PROGRESS = "รายการเก่าจาก source repo ที่ไม่อยู่ใน AI Hero catalog ปัจจุบัน";
+  const IN_PROGRESS_CAUTION = "ไม่แสดงใน catalog ปัจจุบัน; ตรวจ source repo ก่อนติดตั้ง";
+  const MISC = "รายการเก่าจาก source repo ที่ไม่อยู่ใน AI Hero catalog ปัจจุบัน";
+  const MISC_CAUTION = "ไม่แสดงใน catalog ปัจจุบัน; ตรวจ source repo ก่อนติดตั้ง";
 
   function ref(path, label) {
     return { label: label, href: REPO + "/blob/main/" + path };

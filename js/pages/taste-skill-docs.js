@@ -1,11 +1,11 @@
 /* Page module: taste-skill-docs. Verified against Leonxlnx/taste-skill 2.1.4 (2026-10-23). */
 (function () {
   "use strict";
-  var NS = window.DocsIndex = window.DocsIndex || {};
+  const NS = window.DocsIndex = window.DocsIndex || {};
   NS.pages = NS.pages || {};
 
-  var REPO = "https://github.com/Leonxlnx/taste-skill";
-  var SKILL = REPO + "/blob/main/skills/taste-skill/SKILL.md";
+  const REPO = "https://github.com/Leonxlnx/taste-skill";
+  const SKILL = REPO + "/blob/main/skills/taste-skill/SKILL.md";
 
   function refs(label, path) {
     return [{ label: label, href: REPO + "/blob/main/" + path }];

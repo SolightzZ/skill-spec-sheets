@@ -1,0 +1,10 @@
+/* CSS entry for the app pages (apps/*.html). Import order mirrors the
+   original cascade in ../index.css, minus home.css (index.html only) and
+   the per-page sheets, which each app page links directly after this. */
+@import "./base.css";
+@import "./components/stamp.css";
+@import "./layout.css";
+@import "./components/list.css";
+@import "./components/detail.css";
+@import "./components/doc.css";
+@import "./components/footer.css";

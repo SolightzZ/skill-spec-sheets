@@ -1,11 +1,11 @@
 /* Page module: ui-ux-pro-max-skill-docs. Verified against nextlevelbuilder/ui-ux-pro-max-skill 2.15.0 (2026-10-23). */
 (function () {
   "use strict";
-  var NS = window.DocsIndex = window.DocsIndex || {};
+  const NS = window.DocsIndex = window.DocsIndex || {};
   NS.pages = NS.pages || {};
 
-  var REPO = "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill";
-  var MAIN = ".claude/skills/ui-ux-pro-max/SKILL.md";
+  const REPO = "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill";
+  const MAIN = ".claude/skills/ui-ux-pro-max/SKILL.md";
 
   function doc(path, label) {
     return { label: label, href: REPO + "/blob/main/" + path };
@@ -19,7 +19,7 @@
     return doc(".claude/skills/" + id + "/SKILL.md", "skills/" + id + "/SKILL.md");
   }
 
-  var BUNDLED = "สกิล Premium ที่ไม่มีเอกสาร public แยก; ไฟล์มีจริงใน `.claude/skills/` และติดตั้งผ่าน `plugin.json`";
+  const BUNDLED = "สกิล Premium ที่ไม่มีเอกสาร public แยก; ไฟล์มีจริงใน `.claude/skills/` และติดตั้งผ่าน `plugin.json`";
 
   NS.pages["ui-ux-pro-max-skill-docs"] = {
     data: [

@@ -1,40 +1,40 @@
 /* Shared search, filter, list, hash routing, and doc reader engine. */
 (function () {
   "use strict";
-  var NS = window.DocsIndex = window.DocsIndex || {};
-  var esc = NS.esc;
+  const NS = window.DocsIndex = window.DocsIndex || {};
+  const esc = NS.esc;
 
   function init(config) {
-    var list = document.getElementById("list");
-    var detail = document.getElementById("detail");
-    var search = document.getElementById("search");
+    const list = document.getElementById("list");
+    const detail = document.getElementById("detail");
+    const search = document.getElementById("search");
 
     if (!config || !list || !detail || !search) return;
     if (document.body.getAttribute("data-docs-init") === "1") return;
     document.body.setAttribute("data-docs-init", "1");
 
-    var flow = document.getElementById("flow");
-    var status = document.getElementById("status");
-    var empty = document.getElementById("empty");
-    var data = config.data;
-    var idKey = config.idKey || "id";
-    var itemIndex = Object.create(null);
-    var categoryCounts = Object.create(null);
+    const flow = document.getElementById("flow");
+    const status = document.getElementById("status");
+    const empty = document.getElementById("empty");
+    const data = config.data;
+    const idKey = config.idKey || "id";
+    const itemIndex = Object.create(null);
+    const categoryCounts = Object.create(null);
     data.forEach(function (item) {
       itemIndex[String(item[idKey])] = item;
       categoryCounts[item.cat] = (categoryCounts[item.cat] || 0) + 1;
     });
-    var match = config.match || NS.doc.match;
-    var row = config.row || function (item, pressed) { return NS.doc.row(item, config, pressed); };
-    var renderDoc = config.detail || function (item) { return NS.doc.render(item, config); };
-    var state = { q: "", cat: "all", selected: null };
-    var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
-    var baseTitle = document.title;
+    const match = config.match || NS.doc.match;
+    const row = config.row || function (item, pressed) { return NS.doc.row(item, config, pressed); };
+    const renderDoc = config.detail || function (item) { return NS.doc.render(item, config); };
+    const state = { q: "", cat: "all", selected: null };
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const baseTitle = document.title;
 
     function flowSteps() {
       if (config.flow && config.flow.length) return config.flow;
-      var seen = {};
-      var steps = [{ id: "all", label: "ทั้งหมด" }];
+      const seen = {};
+      const steps = [{ id: "all", label: "ทั้งหมด" }];
       data.forEach(function (item) {
         if (!item.cat || seen[item.cat]) return;
         seen[item.cat] = true;
@@ -47,20 +47,20 @@
     }
 
     function readHash() {
-      var raw = window.location.hash.replace(/^#/, "");
+      const raw = window.location.hash.replace(/^#/, "");
       if (!raw) return;
-      var params = new URLSearchParams(raw);
-      var cat = params.get("cat");
-      var item = params.get("item");
+      const params = new URLSearchParams(raw);
+      const cat = params.get("cat");
+      const item = params.get("item");
       if (cat && data.some(function (x) { return x.cat === cat; })) state.cat = cat;
       if (item && itemById(item)) state.selected = item;
     }
 
     function writeHash() {
-      var params = new URLSearchParams();
+      const params = new URLSearchParams();
       if (state.cat !== "all") params.set("cat", state.cat);
       if (state.selected) params.set("item", state.selected);
-      var hash = params.toString();
+      const hash = params.toString();
       history.replaceState(null, "", hash ? "#" + hash : window.location.pathname + window.location.search);
     }
 
@@ -71,12 +71,12 @@
 
     function renderFlow() {
       if (!flow) return;
-      var steps = flowSteps();
+      const steps = flowSteps();
       flow.innerHTML = steps.map(function (step, index) {
-        var count = step.id === "all" ? data.length : (categoryCounts[step.id] || 0);
-        var selected = itemById(state.selected);
-        var current = step.id === "all" ? state.cat === "all" : selected ? selected.cat === step.id : state.cat === step.id;
-        var number = step.id === "all" ? "" : index;
+        const count = step.id === "all" ? data.length : (categoryCounts[step.id] || 0);
+        const selected = itemById(state.selected);
+        const current = step.id === "all" ? state.cat === "all" : selected ? selected.cat === step.id : state.cat === step.id;
+        const number = step.id === "all" ? "" : index;
         return '<button type="button" class="flow-step' + (step.id === "all" ? ' flow-step-all' : '') + '" data-flow-cat="' + esc(step.id) + '" aria-pressed="' + current + '">' +
           '<span class="flow-step-number">' + number + '</span><span>' + esc(step.label) + '</span><small>' + count + '</small></button>';
       }).join("");
@@ -87,8 +87,8 @@
     }
 
     function visible() {
-      var q = state.q.trim().toLowerCase();
-      var terms = q ? q.split(/\s+/).filter(Boolean) : [];
+      const q = state.q.trim().toLowerCase();
+      const terms = q ? q.split(/\s+/).filter(Boolean) : [];
 
       return data.filter(function (item) {
         if (state.cat !== "all" && item.cat !== state.cat) return false;
@@ -98,21 +98,21 @@
     }
 
     function renderList() {
-      var rows = visible();
+      const rows = visible();
       list.innerHTML = rows.map(function (item) {
         return row(item, String(state.selected) === String(item[idKey]));
       }).join("");
 
       if (empty) empty.hidden = rows.length !== 0;
       if (status) {
-        var activeStep = flowSteps().filter(function (step) { return step.id === state.cat; })[0];
-        var activeLabel = activeStep ? activeStep.label : "ทั้งหมด";
+        const activeStep = flowSteps().filter(function (step) { return step.id === state.cat; })[0];
+        const activeLabel = activeStep ? activeStep.label : "ทั้งหมด";
         status.textContent = activeLabel + " · " + rows.length + " จาก " + data.length + " " + config.unit;
       }
     }
 
     function renderDetail() {
-      var item = itemById(state.selected);
+      const item = itemById(state.selected);
 
       if (!item) {
         detail.classList.remove("is-active");
@@ -131,7 +131,7 @@
     }
 
     function open(id) {
-      var item = itemById(id);
+      const item = itemById(id);
       if (!item) return;
       state.selected = item[idKey];
       writeHash();
@@ -139,7 +139,7 @@
       renderList();
       renderDetail();
 
-      var title = detail.querySelector("#doc-title");
+      const title = detail.querySelector("#doc-title");
       if (title) title.focus({ preventScroll: true });
 
       if (window.matchMedia("(max-width: 1199px)").matches) {
@@ -165,7 +165,7 @@
     }
 
     list.addEventListener("click", function (e) {
-      var btn = e.target.closest(".row");
+      const btn = e.target.closest(".row");
       if (btn) select(btn.getAttribute("data-id"));
     });
 
@@ -184,7 +184,7 @@
 
     if (flow) {
       flow.addEventListener("click", function (e) {
-        var button = e.target.closest("[data-flow-cat]");
+        const button = e.target.closest("[data-flow-cat]");
         if (!button) return;
         state.cat = button.getAttribute("data-flow-cat");
         state.selected = null;
@@ -197,11 +197,11 @@
     }
 
     detail.addEventListener("click", function (e) {
-      var copy = e.target.closest("[data-copy]");
-      var flowButton = e.target.closest("[data-flow-cat]");
+      const copy = e.target.closest("[data-copy]");
+      const flowButton = e.target.closest("[data-flow-cat]");
       if (flowButton) {
         state.cat = flowButton.getAttribute("data-flow-cat");
-        var first = data.filter(function (candidate) { return candidate.cat === state.cat; })[0];
+        const first = data.filter(function (candidate) { return candidate.cat === state.cat; })[0];
         state.selected = first ? first[idKey] : null;
         resetSearch();
         writeHash();
@@ -211,16 +211,16 @@
         return;
       }
       if (!copy) return;
-      var text = copy.getAttribute("data-prompt");
+      let text = copy.getAttribute("data-prompt");
       if (!text) {
-        var block = copy.closest(".doc-code") || copy.closest(".doc-example");
-        var source = block && block.querySelector("code, .doc-prompt");
+        const block = copy.closest(".doc-code") || copy.closest(".doc-example");
+        const source = block && block.querySelector("code, .doc-prompt");
         if (!source) return;
         text = source.textContent;
       }
 
       function done() {
-        var old = copy.textContent;
+        const old = copy.textContent;
         copy.textContent = "คัดลอกแล้ว";
         copy.classList.add("is-copied");
         window.setTimeout(function () {
@@ -236,7 +236,7 @@
       }
 
       function fallback() {
-        var area = document.createElement("textarea");
+        const area = document.createElement("textarea");
         area.value = text;
         area.setAttribute("readonly", "");
         area.style.position = "fixed";

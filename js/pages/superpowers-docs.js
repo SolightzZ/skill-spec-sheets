@@ -1,11 +1,11 @@
 /* Page module: superpowers-docs. Verified against obra/superpowers 7.0.0 (2026-10-23). */
 (function () {
   "use strict";
-  var NS = window.DocsIndex = window.DocsIndex || {};
+  const NS = window.DocsIndex = window.DocsIndex || {};
   NS.pages = NS.pages || {};
-  var esc = NS.esc;
+  const esc = NS.esc;
 
-  var REPO = "https://github.com/obra/superpowers";
+  const REPO = "https://github.com/obra/superpowers";
 
   function invoke(id) {
     return [

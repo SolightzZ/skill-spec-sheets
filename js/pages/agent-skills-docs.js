@@ -1,10 +1,10 @@
 /* Page module: agent-skills-docs. Verified against addyosmani/agent-skills 0.6.13 (2026-10-23). */
 (function () {
   "use strict";
-  var NS = window.DocsIndex = window.DocsIndex || {};
+  const NS = window.DocsIndex = window.DocsIndex || {};
   NS.pages = NS.pages || {};
 
-  var REPO = "https://github.com/addyosmani/agent-skills";
+  const REPO = "https://github.com/addyosmani/agent-skills";
 
   function skillInvoke(id) {
     return [
@@ -26,7 +26,7 @@
     return [{ label: "persona บน GitHub", href: REPO + "/blob/main/agents/" + name + ".md" }];
   }
 
-  var skills = [
+  const skills = [
     ["using-agent-skills", "meta", "สกิลแม่ที่ช่วยเลือก workflow ให้ตรงเฟสของงานก่อนลงมือ", "จับคู่งานกับเฟสพัฒนาและโหลด skill ที่ตรงที่สุด ใช้เมื่อเริ่มเซสชันหรือไม่แน่ใจว่าควรเริ่มจากอะไร", ["ทุกเซสชันใหม่", "งานที่คร่อมหลายเฟส"], [
       ["เริ่มงานใหม่", "มีฟีเจอร์ใหม่ที่ยังไม่มีสเปก ควรเริ่มจาก skill ไหน", "agent เลือก spec-driven-development หรือ interview-me ก่อน"],
       ["งานที่ดูเหมือนแก้บั๊ก", "ผู้ใช้บอกว่าปุ่มไม่ทำงาน ควรใช้ workflow อะไร", "agent แยก debugging ออกจาก frontend testing ตามหลักฐาน"],
@@ -154,7 +154,7 @@
     ], ["อย่าปล่อยโดยไม่มีคนเฝ้า", "ทุก launch ต้องมีทางถอย"]]
   ];
 
-  var commands = [
+  const commands = [
     ["spec", "เขียนสเปกที่มีโครงสร้างก่อนลงโค้ด", ["/spec", "/agent-skills:spec"], [
       ["ฟีเจอร์ใหม่", "/spec ระบบ export รายงานเป็น CSV และ PDF", "ได้ SPEC.md พร้อมเป้าหมาย ขอบเขต และเกณฑ์ตรวจ"],
       ["หลาย capability", "/spec ระบบแจ้งเตือนทั้ง in-app และ email", "agent เสนอ capability map ก่อนเขียนสเปกแยกโมดูล"],
@@ -202,17 +202,17 @@
     ]]
   ];
 
-  var personas = [
+  const personas = [
     ["code-reviewer", "รีวิวโค้ดห้ามิติก่อน merge", "ใช้เมื่อต้องการรีวิวละเอียดจากมุมมอง staff engineer"],
     ["security-auditor", "ตรวจช่องโหว่และ threat model", "ใช้เมื่อโค้ดแตะ auth, input หรือข้อมูลอ่อนไหว"],
     ["test-engineer", "ออกแบบชุดเทสและวิเคราะห์ coverage", "ใช้เมื่อเทสไม่พอหรือต้องการกลยุทธ์ทดสอบ"],
     ["web-performance-auditor", "ตรวจ Core Web Vitals และคอขวดฝั่งเว็บ", "ใช้เมื่อหน้าเว็บช้าหรือต้อง audit performance"]
   ];
 
-  var data = [];
+  const data = [];
 
   skills.forEach(function (s) {
-    var id = s[0];
+    const id = s[0];
     data.push({
       id: id,
       cat: s[1],
@@ -230,7 +230,7 @@
   });
 
   commands.forEach(function (c) {
-    var id = c[0];
+    const id = c[0];
     data.push({
       id: "cmd-" + id,
       cat: "command",
@@ -256,7 +256,7 @@
   });
 
   personas.forEach(function (p) {
-    var id = p[0];
+    const id = p[0];
     data.push({
       id: "agent-" + id,
       cat: "agent",

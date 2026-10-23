@@ -1,11 +1,11 @@
 /* Page module: caveman-docs. Verified against Caveman docs and JuliusBrussee/caveman (2026-10-23). */
 (function () {
   "use strict";
-  var NS = window.DocsIndex = window.DocsIndex || {};
+  const NS = window.DocsIndex = window.DocsIndex || {};
   NS.pages = NS.pages || {};
 
-  var REPO = "https://github.com/JuliusBrussee/caveman";
-  var DOCS = "https://docs.caveman.so/caveman";
+  const REPO = "https://github.com/JuliusBrussee/caveman";
+  const DOCS = "https://docs.caveman.so/caveman";
 
   function readme(label, anchor) {
     return { label: "README — " + label, href: REPO + "/blob/main/README.md#" + anchor };

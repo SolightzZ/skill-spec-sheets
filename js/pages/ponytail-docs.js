@@ -1,10 +1,10 @@
 /* Page module: ponytail-docs. Verified against DietrichGebert/ponytail 5.3.2 (2026-10-23). */
 (function () {
   "use strict";
-  var NS = window.DocsIndex = window.DocsIndex || {};
+  const NS = window.DocsIndex = window.DocsIndex || {};
   NS.pages = NS.pages || {};
 
-  var REPO = "https://github.com/DietrichGebert/ponytail";
+  const REPO = "https://github.com/DietrichGebert/ponytail";
 
   function file(path, label) {
     return { label: label || path, href: REPO + "/blob/main/" + path };

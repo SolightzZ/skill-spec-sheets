@@ -83,6 +83,7 @@ function buildPage(dir) {
   const head = render(templates.head, {
     title: data.title,
     description: data.description,
+    stem: data.stem,
   });
 
   const masthead = render(templates.masthead, {

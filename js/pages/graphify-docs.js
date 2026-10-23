@@ -1,10 +1,10 @@
 /* Page module: graphify-docs. Verified against Graphify-Labs/graphify 0.9.93 (2026-10-23). */
 (function () {
   "use strict";
-  var NS = window.DocsIndex = window.DocsIndex || {};
+  const NS = window.DocsIndex = window.DocsIndex || {};
   NS.pages = NS.pages || {};
 
-  var REPO = "https://github.com/Graphify-Labs/graphify";
+  const REPO = "https://github.com/Graphify-Labs/graphify";
 
   /* Repo default branch is v8, but js/core/render.js builds source links as
      /blob/main/<sourcePath>. main is an older line (2026-05) where several

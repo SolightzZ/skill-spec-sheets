@@ -1,11 +1,11 @@
 /* Page module: security-audit-skill-docs. Verified against cloudflare/security-audit-skill c1c8a8c (2026-09-14). */
 (function () {
   "use strict";
-  var NS = window.DocsIndex = window.DocsIndex || {};
+  const NS = window.DocsIndex = window.DocsIndex || {};
   NS.pages = NS.pages || {};
 
-  var REPO = "https://github.com/cloudflare/security-audit-skill";
-  var SKILL = REPO + "/blob/main/skills/security-audit/";
+  const REPO = "https://github.com/cloudflare/security-audit-skill";
+  const SKILL = REPO + "/blob/main/skills/security-audit/";
 
   function ref(file, label) {
     return [{ label: label || file, href: SKILL + file }];

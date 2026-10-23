@@ -1,13 +1,13 @@
 /* Page module: impeccable-docs. Verified against impeccable.style/docs and pbakaus/impeccable (2026-10-23). */
 (function () {
   "use strict";
-  var NS = window.DocsIndex = window.DocsIndex || {};
+  const NS = window.DocsIndex = window.DocsIndex || {};
   NS.pages = NS.pages || {};
 
-  var REPO = "https://github.com/pbakaus/impeccable";
-  var DOCS = "https://impeccable.style/docs/";
-  var SKILL = "skill/SKILL.src.md";
-  var REGISTRY = "crates/foundation/src/registry.rs";
+  const REPO = "https://github.com/pbakaus/impeccable";
+  const DOCS = "https://impeccable.style/docs/";
+  const SKILL = "skill/SKILL.src.md";
+  const REGISTRY = "crates/foundation/src/registry.rs";
 
   function fileRef(path, label) {
     return { label: label || path, href: REPO + "/blob/main/" + path };
@@ -23,8 +23,8 @@
 
   /* Slash form in Claude Code / Cursor / Copilot; $ form in Codex; pinned shortcut after `/impeccable pin`. */
   function commandInvoke(name, usage) {
-    var command = name ? " " + name : "";
-    var tail = usage ? " " + usage : "";
+    const command = name ? " " + name : "";
+    const tail = usage ? " " + usage : "";
     return [
       { label: "Claude Code / Cursor / Copilot", code: "/impeccable" + command + tail, language: "text" },
       {

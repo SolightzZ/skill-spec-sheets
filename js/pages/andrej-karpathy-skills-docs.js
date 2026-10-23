@@ -1,11 +1,11 @@
 /* Page module: andrej-karpathy-skills-docs. Verified against forrestchang/andrej-karpathy-skills 1.0.0 (2026-10-23). */
 (function () {
   "use strict";
-  var NS = window.DocsIndex = window.DocsIndex || {};
+  const NS = window.DocsIndex = window.DocsIndex || {};
   NS.pages = NS.pages || {};
 
-  var REPO = "https://github.com/forrestchang/andrej-karpathy-skills";
-  var SKILL_PATH = "skills/karpathy-guidelines/SKILL.md";
+  const REPO = "https://github.com/forrestchang/andrej-karpathy-skills";
+  const SKILL_PATH = "skills/karpathy-guidelines/SKILL.md";
 
   function skillRef(section, anchor) {
     return { label: "SKILL.md — " + section, href: REPO + "/blob/main/" + SKILL_PATH + "#" + anchor };

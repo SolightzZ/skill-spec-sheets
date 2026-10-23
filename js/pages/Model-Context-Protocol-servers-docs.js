@@ -1,17 +1,17 @@
 /* Page module: Model-Context-Protocol-servers-docs. Verified against modelcontextprotocol/servers (2026-10-23). */
 (function () {
   "use strict";
-  var NS = window.DocsIndex = window.DocsIndex || {};
+  const NS = window.DocsIndex = window.DocsIndex || {};
   NS.pages = NS.pages || {};
 
-  var REPO = "https://github.com/modelcontextprotocol/servers";
+  const REPO = "https://github.com/modelcontextprotocol/servers";
 
   function ref(name) {
     return [{ label: "README ของเซิร์ฟเวอร์บน GitHub", href: REPO + "/blob/main/src/" + name + "/README.md" }];
   }
 
   function config(name, command, args, env) {
-    var servers = {};
+    const servers = {};
     servers[name] = { command: command, args: args };
     if (env) servers[name].env = env;
     return JSON.stringify({ mcpServers: servers }, null, 2);

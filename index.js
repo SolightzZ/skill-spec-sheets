@@ -2,7 +2,7 @@
 (function () {
   "use strict";
 
-  var PAGE_FILES = {
+  const PAGE_FILES = {
     "Model-Context-Protocol-servers-docs": "./js/pages/Model-Context-Protocol-servers-docs.js",
     "agent-skills-docs": "./js/pages/agent-skills-docs.js",
     "andrej-karpathy-skills-docs": "./js/pages/andrej-karpathy-skills-docs.js",
@@ -17,37 +17,37 @@
     "ui-ux-pro-max-skill-docs": "./js/pages/ui-ux-pro-max-skill-docs.js"
   };
 
-  var page = document.body.getAttribute("data-page");
+  const page = document.body.getAttribute("data-page");
   if (!page || !Object.prototype.hasOwnProperty.call(PAGE_FILES, page)) return;
 
-  var entry = document.currentScript || document.querySelector('script[src$="index.js"]');
-  var base = new URL("./", entry && entry.src ? entry.src : document.baseURI);
-  var sources = [
+  const entry = document.currentScript || document.querySelector('script[src$="index.js"]');
+  const base = new URL("./", entry && entry.src ? entry.src : document.baseURI);
+  const sources = [
     new URL("js/core/escape.js", base).href,
     new URL("js/core/render.js", base).href,
     new URL("js/core/init.js", base).href,
     new URL(PAGE_FILES[page], base).href
   ];
-  var index = 0;
 
-  function next() {
-    if (index >= sources.length) {
-      var NS = window.DocsIndex;
-      if (NS && NS.init && NS.pages && NS.pages[page]) NS.init(NS.pages[page]);
-      return;
-    }
-
-    var src = sources[index++];
-    var script = document.createElement("script");
+  // Performance: create all four elements up front so the browser discovers
+  // every dependency in the first pass and downloads them in parallel;
+  // "async" false still runs classic scripts in insertion order, so the
+  // init cascade (escape -> render -> init -> page) is unchanged.
+  // Init runs on the page module's onload: load fires after execution, and
+  // DOMContentLoaded is not reliable here (dynamic scripts do not block it).
+  sources.forEach(function (src, i) {
+    const script = document.createElement("script");
     script.src = src;
-    // Download dependencies in parallel while preserving execution order.
     script.async = false;
-    script.onload = next;
+    if (i === sources.length - 1) {
+      script.onload = function () {
+        const NS = window.DocsIndex;
+        if (NS && NS.init && NS.pages && NS.pages[page]) NS.init(NS.pages[page]);
+      };
+    }
     script.onerror = function () {
       console.error("[docs] failed to load " + src);
     };
     document.head.appendChild(script);
-  }
-
-  next();
+  });
 })();
