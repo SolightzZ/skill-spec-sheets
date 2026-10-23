@@ -1,0 +1,73 @@
+/* Skeleton loading placeholders for the apps pages.
+   The page shells ship static placeholder bars inside #flow, #list and
+   #detail; js/core/init.js replaces them with the first data render and
+   clears aria-busy. Bars use --rule on paper: flat, square, no motion.
+   Geometry mirrors the real .row / .flow-step / .detail-empty so the first
+   data render swaps in place without a layout jump. */
+.sk {
+  cursor: default;
+  pointer-events: none;
+}
+.sk::before {
+  background: var(--rule);
+  transition: none;
+}
+.sk .sk-fill {
+  display: block;
+  height: 0.9em;
+  background: var(--rule);
+}
+/* When JavaScript is unavailable the rendered <noscript> note carries the
+   item count instead; matching the note with :has() drops the placeholders
+   (with scripting enabled the note never renders, so the rule is inert).
+   The selectors mirror the only classes the shells ever use so the rule
+   outranks the matching body.page-* .row / .flow-step display rules. */
+body:has(.noscript-plain) .flow-step.sk,
+body:has(.noscript-plain) .row.sk,
+body:has(.noscript-plain) .detail-empty.sk {
+  display: none;
+}
+
+/* List rows: reuse the per-page .row grid; font-relative bar heights keep
+   the row rhythm of every page sheet. */
+.sk .sk-name {
+  height: 1.35em;
+  width: 58%;
+}
+.sk .sk-tag {
+  height: 0.9em;
+  width: 3.2rem;
+}
+.sk .sk-desc {
+  margin-top: 0;
+  width: 96%;
+}
+.sk .sk-desc-2 {
+  margin-top: 0.4em;
+  width: 64%;
+}
+
+/* Flow rail: mirror .flow-step and the .flow-step-all divider. */
+.sk .sk-fnum {
+  height: 0.8em;
+  width: 1em;
+}
+.sk .sk-fline {
+  width: 72%;
+}
+.sk .sk-fcount {
+  width: 1.4rem;
+}
+
+/* Detail panel: placeholder reading sheet inside .detail-empty styling. */
+.sk .sk-title {
+  height: 1.3em;
+  width: 46%;
+  margin-top: 0.15em;
+}
+.sk .sk-title + .sk-fill {
+  margin-top: 0.75em;
+}
+.sk .sk-line-short {
+  width: 61%;
+}

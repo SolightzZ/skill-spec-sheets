@@ -265,6 +265,10 @@
     renderFlow();
     renderList();
     renderDetail();
+
+    [list, detail, flow].forEach(function (el) {
+      el.removeAttribute("aria-busy");
+    });
   }
 
   NS.init = init;

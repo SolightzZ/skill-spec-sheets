@@ -4,7 +4,11 @@
 {{railExtra}}
     <nav class="flow-nav" aria-label="เส้นทางงาน">
       <p class="flow-nav-label">เส้นทางงาน</p>
-      <div id="flow" class="flow-steps"></div>
+      <div id="flow" class="flow-steps" aria-busy="true">
+        <span class="flow-step flow-step-all sk" aria-hidden="true"><span class="flow-step-number"></span><span class="sk-fill sk-fline"></span><span class="sk-fill sk-fcount"></span></span>
+        <span class="flow-step sk" aria-hidden="true"><span class="sk-fill sk-fnum"></span><span class="sk-fill sk-fline"></span><span class="sk-fill sk-fcount"></span></span>
+        <span class="flow-step sk" aria-hidden="true"><span class="sk-fill sk-fnum"></span><span class="sk-fill sk-fline"></span><span class="sk-fill sk-fcount"></span></span>
+      </div>
     </nav>
     <p class="status" id="status" role="status" aria-live="polite">{{status}}</p>
 {{install}}

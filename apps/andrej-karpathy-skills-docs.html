@@ -41,7 +41,11 @@
 
     <nav class="flow-nav" aria-label="เส้นทางงาน">
       <p class="flow-nav-label">เส้นทางงาน</p>
-      <div id="flow" class="flow-steps"></div>
+      <div id="flow" class="flow-steps" aria-busy="true">
+        <span class="flow-step flow-step-all sk" aria-hidden="true"><span class="flow-step-number"></span><span class="sk-fill sk-fline"></span><span class="sk-fill sk-fcount"></span></span>
+        <span class="flow-step sk" aria-hidden="true"><span class="sk-fill sk-fnum"></span><span class="sk-fill sk-fline"></span><span class="sk-fill sk-fcount"></span></span>
+        <span class="flow-step sk" aria-hidden="true"><span class="sk-fill sk-fnum"></span><span class="sk-fill sk-fline"></span><span class="sk-fill sk-fcount"></span></span>
+      </div>
     </nav>
     <p class="status" id="status" role="status" aria-live="polite">ทั้งหมด · 5 จาก 5 รายการ</p>
 
@@ -69,7 +73,15 @@
 
   <section class="index" aria-label="รายการสกิลและหลักการ">
     <h2 class="sr-only">karpathy-guidelines และหลักการทั้งสี่ข้อ</h2>
-    <ol id="list" class="list"></ol>
+    <ol id="list" class="list" aria-busy="true">
+      <li><div class="row sk" aria-hidden="true"><span class="name"><span class="sk-fill sk-name"></span></span><span class="tag"><span class="sk-fill sk-tag"></span></span><span class="desc"><span class="sk-fill sk-desc"></span><span class="sk-fill sk-desc-2"></span></span></div></li>
+      <li><div class="row sk" aria-hidden="true"><span class="name"><span class="sk-fill sk-name"></span></span><span class="tag"><span class="sk-fill sk-tag"></span></span><span class="desc"><span class="sk-fill sk-desc"></span><span class="sk-fill sk-desc-2"></span></span></div></li>
+      <li><div class="row sk" aria-hidden="true"><span class="name"><span class="sk-fill sk-name"></span></span><span class="tag"><span class="sk-fill sk-tag"></span></span><span class="desc"><span class="sk-fill sk-desc"></span><span class="sk-fill sk-desc-2"></span></span></div></li>
+      <li><div class="row sk" aria-hidden="true"><span class="name"><span class="sk-fill sk-name"></span></span><span class="tag"><span class="sk-fill sk-tag"></span></span><span class="desc"><span class="sk-fill sk-desc"></span><span class="sk-fill sk-desc-2"></span></span></div></li>
+      <li><div class="row sk" aria-hidden="true"><span class="name"><span class="sk-fill sk-name"></span></span><span class="tag"><span class="sk-fill sk-tag"></span></span><span class="desc"><span class="sk-fill sk-desc"></span><span class="sk-fill sk-desc-2"></span></span></div></li>
+      <li><div class="row sk" aria-hidden="true"><span class="name"><span class="sk-fill sk-name"></span></span><span class="tag"><span class="sk-fill sk-tag"></span></span><span class="desc"><span class="sk-fill sk-desc"></span><span class="sk-fill sk-desc-2"></span></span></div></li>
+      <li><div class="row sk" aria-hidden="true"><span class="name"><span class="sk-fill sk-name"></span></span><span class="tag"><span class="sk-fill sk-tag"></span></span><span class="desc"><span class="sk-fill sk-desc"></span><span class="sk-fill sk-desc-2"></span></span></div></li>
+    </ol>
     <p class="empty" id="empty" hidden>ไม่พบรายการที่ตรงกับคำค้น ลองใช้คำสั้นลง หรือล้างช่องค้นหา</p>
 
     <section class="signals" aria-label="สัญญาณว่าหลักการกำลังทำงาน">
@@ -84,7 +96,13 @@
 
   </section>
 
-  <aside id="detail" class="detail" aria-label="รายละเอียดสกิลและหลักการ" aria-live="polite"></aside>
+  <aside id="detail" class="detail" aria-label="รายละเอียดสกิลและหลักการ" aria-live="polite" aria-busy="true">
+    <div class="detail-empty sk" aria-hidden="true">
+      <span class="sk-fill sk-title"></span>
+      <span class="sk-fill sk-line"></span>
+      <span class="sk-fill sk-line sk-line-short"></span>
+    </div>
+  </aside>
 
 </main>
 
