@@ -1,0 +1,19 @@
+<section class="signals" aria-label="สามคำตัดสิน">
+  <h2>สามคำตัดสิน</h2>
+  <ul>
+    <li><code>confirmed</code> source trace ครบ + demonstrated impact; มี severity</li>
+    <li><code>needs_validation</code> source-grounded แต่ blocker ยังชี้ชัด; ไม่มี severity</li>
+    <li><code>rejected</code> ถูกหักล้างด้วย source หรือ local evidence; เก็บไว้กันอ้างซ้ำ</li>
+  </ul>
+</section>
+
+<section class="signals" aria-label="หลักที่ห้ามละ">
+  <h2>หลักที่ห้ามละ</h2>
+  <ul>
+    <li>ยืนยันเฉพาะ boundary failure ที่พิสูจน์ได้</li>
+    <li>เอเจนต์ที่ตรวจต้องไม่ใช่เอเจนต์ที่พบ</li>
+    <li>severity ต้องมาจาก impact ไม่ใช่ checklist deviation</li>
+    <li>defense-in-depth gap ที่มีชั้นอื่นกันอยู่ไม่ใช่ช่องโหว่</li>
+    <li>หลาย run เพิ่ม coverage; run เดียวไม่เท่ากับ exhaustive</li>
+  </ul>
+</section>

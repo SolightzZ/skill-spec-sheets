@@ -1,0 +1,84 @@
+{
+  "stem": "ponytail-docs",
+  "title": "ponytail — skillsheet 5.3.2",
+  "description": "ponytail 5.3.2 — skills สำหรับงาน senior dev พร้อมคำสั่งและ benchmark",
+  "masthead": {
+    "title": "ponytail",
+    "lede": "อ่านโค้ดก่อนลงมือ ลดงานเกินจำเป็น และตรวจผลลัพธ์",
+    "stamp": [
+      {
+        "label": "เวอร์ชัน",
+        "value": "5.3.2"
+      },
+      {
+        "label": "คำสั่ง",
+        "value": "6"
+      },
+      {
+        "label": "หลักการ",
+        "value": "7"
+      },
+      {
+        "label": "สัญญาอนุญาต",
+        "value": "MIT"
+      }
+    ]
+  },
+  "rail": {
+    "ariaLabel": "ค้นหาและกรองรายการ",
+    "label": "ค้นหา",
+    "placeholder": "ชื่อคำสั่ง หลักการ หรือการติดตั้ง",
+    "filters": {
+      "mode": "none",
+      "className": "",
+      "ariaLabel": "กรองตามหมวด",
+      "chips": [
+        {
+          "cat": "all",
+          "label": "ทั้งหมด",
+          "count": 19,
+          "pressed": "true"
+        },
+        {
+          "cat": "command",
+          "label": "คำสั่ง",
+          "count": 6,
+          "pressed": "false"
+        },
+        {
+          "cat": "concept",
+          "label": "หลักการ",
+          "count": 7,
+          "pressed": "false"
+        },
+        {
+          "cat": "system",
+          "label": "ระบบ",
+          "count": 3,
+          "pressed": "false"
+        },
+        {
+          "cat": "install",
+          "label": "ติดตั้ง",
+          "count": 3,
+          "pressed": "false"
+        }
+      ]
+    },
+    "status": "19 จาก 19 รายการ"
+  },
+  "index": {
+    "ariaLabel": "รายการทั้งหมด",
+    "srTitle": "รายการทั้งหมด",
+    "empty": "ไม่พบรายการที่ตรงกับคำค้น ลองใช้คำสั้นลง หรือกด &ldquo;ทั้งหมด&rdquo;"
+  },
+  "detail": {
+    "ariaLabel": "รายละเอียด"
+  },
+  "footer": {
+    "note": "",
+    "meta": "ponytail 5.3.2 · MIT",
+    "source": "ที่มา <code>github.com/DietrichGebert/ponytail</code> (MIT)"
+  },
+  "noscript": "หน้านี้ต้องใช้ JavaScript เพื่อแสดงรายการ 19 รายการ"
+}

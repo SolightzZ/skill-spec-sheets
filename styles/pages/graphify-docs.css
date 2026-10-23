@@ -1,0 +1,254 @@
+/* graphify-docs */
+body.page-graphify-docs .masthead {
+  background: var(--pine);
+  color: var(--paper);
+  padding: clamp(28px, 6vw, 64px) clamp(20px, 5vw, 56px);
+  display: grid;
+  gap: clamp(28px, 4vw, 56px);
+  grid-template-columns: minmax(0, 1fr);
+  align-items: end;
+}
+body.page-graphify-docs .masthead > div {
+  min-width: 0;
+}
+body.page-graphify-docs .masthead h1 {
+  font-family: var(--display);
+  font-stretch: 87.5%;
+  font-weight: 700;
+  font-size: clamp(3rem, 10vw, 7rem);
+  line-height: 0.86;
+  letter-spacing: -0.03em;
+  margin-bottom: 0.35em;
+  overflow-wrap: anywhere;
+}
+body.page-graphify-docs .lede {
+  margin: 0;
+  max-width: 54ch;
+  color: #c9d3cb;
+  font-size: clamp(0.9375rem, 1.1vw, 1.0625rem);
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+}
+@media (min-width: 900px) {
+  body.page-graphify-docs .stamp {
+    border-top: 0;
+    border-left: 1px solid rgba(232, 234, 227, 0.35);
+    padding-top: 0;
+    padding-left: 28px;
+    min-width: 15rem;
+  }
+}
+body.page-graphify-docs .filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 12px;
+}
+body.page-graphify-docs .chip {
+  font: inherit;
+  font-size: 0.75rem;
+  line-height: 1.5;
+  color: var(--muted);
+  background: transparent;
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  padding: 3px 9px;
+  cursor: pointer;
+}
+body.page-graphify-docs .chip:hover {
+  border-color: var(--muted);
+}
+body.page-graphify-docs .chip[aria-pressed="true"] {
+  color: var(--paper);
+  background: var(--ink);
+  border-color: var(--ink);
+}
+body.page-graphify-docs .chip .n {
+  font-family: var(--data);
+  font-size: 0.6875rem;
+  opacity: 0.75;
+  margin-left: 3px;
+}
+body.page-graphify-docs .status {
+  margin: 14px 0 0;
+  font-size: 0.8125rem;
+  color: var(--muted);
+}
+body.page-graphify-docs .install {
+  margin-top: 26px;
+  padding-top: 18px;
+  border-top: 1px solid var(--rule);
+}
+body.page-graphify-docs .install h2 + h2 {
+  margin-top: 18px;
+}
+body.page-graphify-docs .install code + code {
+  margin-top: 6px;
+}
+body.page-graphify-docs .install .hint {
+  margin: 12px 0 0;
+  font-size: 0.75rem;
+  line-height: 1.55;
+  color: var(--muted);
+}
+body.page-graphify-docs .install .hint code {
+  display: inline;
+}
+body.page-graphify-docs .row {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  column-gap: 16px;
+  row-gap: 3px;
+  width: 100%;
+  text-align: left;
+  font: inherit;
+  color: inherit;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid var(--rule);
+  padding: 16px 12px 16px 20px;
+  cursor: pointer;
+}
+body.page-graphify-docs .row .name {
+  font-family: var(--data);
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+}
+body.page-graphify-docs .row[data-cat="start"] {
+  --cat-color: var(--signal);
+}
+body.page-graphify-docs .row[data-cat="update"] {
+  --cat-color: var(--ochre);
+}
+body.page-graphify-docs .row[data-cat="ask"] {
+  --cat-color: var(--plum);
+}
+body.page-graphify-docs .row[data-cat="team"] {
+  --cat-color: var(--rust);
+}
+body.page-graphify-docs .signals {
+  margin-top: 32px;
+  padding-top: 20px;
+  border-top: 1px solid var(--rule);
+}
+body.page-graphify-docs .signals h2 {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--muted);
+  margin-bottom: 10px;
+}
+body.page-graphify-docs .signals ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 10px 24px;
+}
+body.page-graphify-docs .signals li {
+  position: relative;
+  padding-left: 16px;
+  font-size: 0.875rem;
+  line-height: 1.55;
+}
+body.page-graphify-docs .signals li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.62em;
+  width: 6px;
+  height: 1px;
+  background: var(--rule);
+}
+body.page-graphify-docs .signals code {
+  font-family: var(--data);
+  font-size: 0.75rem;
+  color: var(--ink);
+}
+@media (min-width: 900px) and (max-width: 1199px) {
+  body.page-graphify-docs .sheet {
+    grid-template-areas: "rail list" "rail detail";
+  }
+  body.page-graphify-docs .detail.is-active {
+    border-top: 1px solid var(--rule);
+    padding: 28px 32px 40px;
+  }
+  body.page-graphify-docs .detail-card {
+    max-width: 62ch;
+  }
+}
+body.page-graphify-docs .detail-card .cmd-head {
+  font-family: var(--data);
+  font-size: 1.0625rem;
+  font-weight: 600;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+}
+body.page-graphify-docs .detail-cat[data-cat="start"] {
+  background: #dde7ee;
+}
+body.page-graphify-docs .detail-cat[data-cat="update"] {
+  background: #ece6d4;
+}
+body.page-graphify-docs .detail-cat[data-cat="ask"] {
+  background: #e6dfee;
+}
+body.page-graphify-docs .detail-cat[data-cat="team"] {
+  background: #ecdfd8;
+}
+body.page-graphify-docs .detail-sub {
+  margin: 4px 0 0;
+  font-size: 0.875rem;
+  color: var(--muted);
+}
+body.page-graphify-docs .fm div {
+  display: grid;
+  grid-template-columns: 4.75rem minmax(0, 1fr);
+  gap: 10px;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--rule);
+}
+body.page-graphify-docs .rules-title {
+  margin: 18px 0 8px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--muted);
+}
+body.page-graphify-docs .rules {
+  margin: 0;
+  padding-left: 1.1rem;
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+body.page-graphify-docs .rules li + li {
+  margin-top: 5px;
+}
+body.page-graphify-docs .rules code {
+  font-family: var(--data);
+  font-size: 0.75rem;
+}
+body.page-graphify-docs .code {
+  margin: 0;
+  padding: 11px 12px;
+  background: var(--ink);
+  color: #e8eae3;
+  border-radius: 2px;
+  overflow-x: auto;
+  font-family: var(--data);
+  font-size: 0.75rem;
+  line-height: 1.65;
+  white-space: pre;
+}
+body.page-graphify-docs .code code {
+  font-family: inherit;
+  font-size: inherit;
+}
+@media (prefers-reduced-motion: reduce) {
+  body.page-graphify-docs .row::before {
+    transition: none;
+  }
+}
+

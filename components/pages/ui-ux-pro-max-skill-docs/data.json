@@ -1,0 +1,78 @@
+{
+  "stem": "ui-ux-pro-max-skill-docs",
+  "title": "ui ux pro max — design intelligence",
+  "description": "UI UX Pro Max 2.15.0 — 7 skills, 7 steps, 5 references และ 1,272 stack guidelines",
+  "masthead": {
+    "title": "ui ux pro max",
+    "lede": "สร้าง design system จาก product type, style, UX และ stack ที่เลือก",
+    "stamp": [
+      {
+        "label": "เวอร์ชัน",
+        "value": "2.15.0"
+      },
+      {
+        "label": "สไตล์",
+        "value": "79"
+      },
+      {
+          "label": "เทคโนโลยี",
+        "value": "22"
+      },
+      {
+        "label": "รายการ",
+        "value": "19"
+      }
+    ]
+  },
+  "rail": {
+    "ariaLabel": "ค้นหาและติดตั้ง",
+    "label": "ค้นหาสกิลและขั้นตอน",
+    "placeholder": "design system persist stack ux",
+    "filters": {
+      "mode": "none",
+      "className": "",
+      "ariaLabel": "กรองตามหมวด",
+      "chips": [
+        {
+          "cat": "all",
+          "label": "ทั้งหมด",
+          "count": 19,
+          "pressed": "true"
+        },
+        {
+          "cat": "skill",
+          "label": "สกิล",
+          "count": 7,
+          "pressed": "false"
+        },
+        {
+          "cat": "step",
+          "label": "ขั้นตอน",
+          "count": 7,
+          "pressed": "false"
+        },
+        {
+          "cat": "reference",
+          "label": "อ้างอิง",
+          "count": 5,
+          "pressed": "false"
+        }
+      ]
+    },
+    "status": "19 จาก 19 รายการ"
+  },
+  "index": {
+    "ariaLabel": "รายการสกิลและขั้นตอน",
+    "srTitle": "สกิล ขั้นตอน และเอกสารอ้างอิงของ UI UX Pro Max",
+    "empty": "ไม่พบรายการที่ตรงกับคำค้นหรือหมวดที่เลือก ลองใช้คำสั้นลง หรือกด &ldquo;ทั้งหมด&rdquo;"
+  },
+  "detail": {
+    "ariaLabel": "รายละเอียดรายการ"
+  },
+  "footer": {
+    "note": "",
+    "meta": "ui-ux-pro-max 2.15.0 · MIT",
+    "source": "ที่มา <code>github.com/nextlevelbuilder/ui-ux-pro-max-skill</code>"
+  },
+  "noscript": "หน้านี้ต้องใช้ JavaScript เพื่อแสดงทั้ง 19 รายการ"
+}

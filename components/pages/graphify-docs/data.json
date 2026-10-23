@@ -1,0 +1,90 @@
+{
+  "stem": "graphify-docs",
+  "title": "graphify — command sheet 0.9.93",
+  "description": "graphify 0.9.93 — 16 คำสั่งสร้างและถาม knowledge graph",
+  "masthead": {
+    "title": "graphify",
+    "lede": "สร้าง knowledge graph ในเครื่อง แล้วถามเส้นทางและความสัมพันธ์จากข้อมูล",
+    "stamp": [
+      {
+        "label": "เวอร์ชัน",
+        "value": "0.9.93"
+      },
+      {
+        "label": "คำสั่งในหน้า",
+        "value": "16"
+      },
+      {
+        "label": "ภาษา",
+        "value": "~40"
+      },
+      {
+        "label": "สัญญาอนุญาต",
+        "value": "Apache-2.0"
+      }
+    ]
+  },
+  "rail": {
+    "ariaLabel": "ค้นหาและติดตั้ง",
+    "label": "ค้นหาคำสั่ง",
+    "placeholder": "สร้าง ถาม path update PR export",
+    "filters": {
+      "mode": "none",
+      "className": "",
+      "ariaLabel": "กรองตามหมวด",
+      "chips": [
+        {
+          "cat": "all",
+          "label": "ทั้งหมด",
+          "count": 16,
+          "pressed": "true"
+        },
+        {
+          "cat": "pipeline",
+          "label": "ไปป์ไลน์",
+          "count": 4,
+          "pressed": "false"
+        },
+        {
+          "cat": "query",
+          "label": "ถามกราฟ",
+          "count": 4,
+          "pressed": "false"
+        },
+        {
+          "cat": "maintain",
+          "label": "ดูแลกราฟ",
+          "count": 5,
+          "pressed": "false"
+        },
+        {
+          "cat": "install",
+          "label": "ติดตั้ง",
+          "count": 2,
+          "pressed": "false"
+        },
+        {
+          "cat": "export",
+          "label": "ส่งออก",
+          "count": 1,
+          "pressed": "false"
+        }
+      ]
+    },
+    "status": "16 จาก 16 คำสั่ง"
+  },
+  "index": {
+    "ariaLabel": "รายการคำสั่ง",
+    "srTitle": "คำสั่งทั้งหมด",
+    "empty": "ไม่พบคำสั่งที่ตรงกับคำค้นหรือหมวดที่เลือก ลองใช้คำสั้นลง หรือเลือกทั้งหมด"
+  },
+  "detail": {
+    "ariaLabel": "รายละเอียดคำสั่ง"
+  },
+  "footer": {
+    "note": "",
+    "meta": "graphify 0.9.93 · Apache-2.0",
+    "source": "ที่มา <code>github.com/Graphify-Labs/graphify</code> · PyPI <code>graphifyy</code>"
+  },
+  "noscript": "หน้านี้ต้องใช้ JavaScript เพื่อแสดงคำสั่งทั้ง 16 รายการ"
+}

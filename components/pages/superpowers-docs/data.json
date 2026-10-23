@@ -1,0 +1,78 @@
+{
+  "stem": "superpowers-docs",
+  "title": "superpowers — skillsheet 7.0.0",
+  "description": "superpowers 7.0.0 — 15 skills สำหรับกระบวนการ โค้ด และพื้นฐาน",
+  "masthead": {
+    "title": "superpowers",
+    "lede": "ทำงานเป็นลำดับ: คุยสเปก เทสก่อนโค้ด และตรวจหลักฐานก่อนปิดงาน",
+    "stamp": [
+      {
+        "label": "เวอร์ชัน",
+        "value": "7.0.0"
+      },
+      {
+        "label": "คอมมิต",
+        "value": "b739a8a"
+      },
+      {
+        "label": "ทักษะหลัก",
+        "value": "15"
+      },
+      {
+        "label": "อัปเดต",
+        "value": "20 ต.ค. 2026"
+      }
+    ]
+  },
+  "rail": {
+    "ariaLabel": "ค้นหาและกรองทักษะ",
+    "label": "ค้นหาทักษะ",
+    "placeholder": "ชื่อ หรือสิ่งที่อยากทำ",
+    "filters": {
+      "mode": "none",
+      "className": "",
+      "ariaLabel": "กรองตามหมวด",
+      "chips": [
+        {
+          "cat": "all",
+          "label": "ทั้งหมด",
+          "count": 15,
+          "pressed": "true"
+        },
+        {
+          "cat": "process",
+          "label": "กระบวนการ",
+          "count": 5,
+          "pressed": "false"
+        },
+        {
+          "cat": "code",
+          "label": "โค้ด",
+          "count": 7,
+          "pressed": "false"
+        },
+        {
+          "cat": "meta",
+          "label": "พื้นฐาน",
+          "count": 3,
+          "pressed": "false"
+        }
+      ]
+    },
+    "status": "15 จาก 15 ทักษะ"
+  },
+  "index": {
+    "ariaLabel": "รายการทักษะ",
+    "srTitle": "รายการทักษะทั้งหมด",
+    "empty": "ไม่พบทักษะที่ตรงกับคำค้น ลองใช้คำสั้นลง หรือกด &ldquo;ทั้งหมด&rdquo;"
+  },
+  "detail": {
+    "ariaLabel": "รายละเอียดทักษะ"
+  },
+  "footer": {
+    "note": "",
+    "meta": "superpowers 7.0.0 · MIT",
+    "source": "ที่มา <code>github.com/obra/superpowers</code>"
+  },
+  "noscript": "หน้านี้ต้องใช้ JavaScript เพื่อแสดงรายการ 15 ทักษะ"
+}

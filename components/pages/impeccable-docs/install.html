@@ -1,0 +1,39 @@
+<div class="install">
+  <h2>ติดตั้ง (แนะนำ)</h2>
+  <code>npx impeccable install</code>
+  <code>/impeccable init</code>
+  <code>npx impeccable update</code>
+  <p class="hint">รันในโปรเจกต์ที่ใช้ Node.js 18.19+ แล้วรีสตาร์ตเครื่องมือและอนุมัติ hook ใน Codex</p>
+</div>
+
+<div class="install">
+  <h2>ทางเลือก: plugin marketplace</h2>
+  <code>/plugin marketplace add pbakaus/impeccable</code>
+  <p class="hint">Claude Code เท่านั้น: เพิ่ม marketplace, ติดตั้ง แล้วรัน <code>/impeccable init</code></p>
+</div>
+
+<div class="install">
+  <h2>ทางเลือก: git submodule</h2>
+  <code>git submodule add https://github.com/pbakaus/impeccable .impeccable</code>
+  <code>npx impeccable link --source=.impeccable --providers=claude,cursor</code>
+  <code>git submodule update --remote .impeccable</code>
+  <p class="hint">ใช้ Git แทน <code>npx impeccable update</code>; <code>link</code> สร้าง symlink</p>
+</div>
+
+<div class="install">
+  <h2>เรียกใช้</h2>
+  <code>/impeccable &lt;command&gt; &lt;target&gt;</code>
+  <code>/impeccable audit blog</code>
+  <code>/impeccable critique landing</code>
+  <code>$impeccable audit blog</code>
+  <p class="hint">Claude Code/Cursor/Copilot ใช้ <code>/impeccable</code>; Codex ใช้ <code>$impeccable</code>; ใช้ <code>pin</code> เมื่อต้องเรียกซ้ำ</p>
+</div>
+
+<div class="install">
+  <h2>ข้อมูลการใช้งาน</h2>
+  <code>npx impeccable telemetry status</code>
+  <code>npx impeccable telemetry off</code>
+  <code>DO_NOT_TRACK=1</code>
+  <code>IMPECCABLE_NO_TELEMETRY=1</code>
+  <p class="hint">เปิดโดยค่าเริ่มต้น; ปิดด้วยคำสั่งด้านบน, <code>DO_NOT_TRACK=1</code> หรือ <code>telemetry: false</code></p>
+</div>

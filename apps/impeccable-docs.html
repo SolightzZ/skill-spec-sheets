@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Impeccable 4.7.0 — 24 คำสั่งและ 61 กฎตรวจสำหรับงาน UI">
+<title>impeccable — skillsheet 4.7.0</title>
+<link rel="stylesheet" href="../index.css">
+</head>
+<body class="page-impeccable-docs" data-page="impeccable-docs">
+
+<header class="masthead">
+  <div>
+    <h1>impeccable</h1>
+    <p class="lede">คำสั่งสำหรับออกแบบ ตรวจ และปรับปรุง UI พร้อม detector และ live mode</p>
+  </div>
+  <dl class="stamp">
+    <div><dt>เวอร์ชัน</dt><dd>4.7.0</dd></div>
+    <div><dt>รายการ</dt><dd>52</dd></div>
+    <div><dt>กฎใน registry</dt><dd>61</dd></div>
+    <div><dt>อัปเดต</dt><dd>23 ต.ค. 2026</dd></div>
+  </dl>
+</header>
+
+<main class="sheet">
+
+  <section class="rail" aria-label="ค้นหาและกรองรายการ">
+    <label for="search">ค้นหา</label>
+    <input id="search" type="search" placeholder="ชื่อคำสั่ง โหมด หลักการ หรือกฎ" autocomplete="off" spellcheck="false">
+
+
+    <nav class="flow-nav" aria-label="เส้นทางงาน">
+      <p class="flow-nav-label">เส้นทางงาน</p>
+      <div id="flow" class="flow-steps"></div>
+    </nav>
+    <p class="status" id="status" role="status" aria-live="polite">52 จาก 52 รายการ</p>
+
+    <div class="install">
+      <h2>ติดตั้ง (แนะนำ)</h2>
+      <code>npx impeccable install</code>
+      <code>/impeccable init</code>
+      <code>npx impeccable update</code>
+      <p class="hint">รันในโปรเจกต์ที่ใช้ Node.js 18.19+ แล้วรีสตาร์ตเครื่องมือและอนุมัติ hook ใน Codex</p>
+    </div>
+
+    <div class="install">
+      <h2>ทางเลือก: plugin marketplace</h2>
+      <code>/plugin marketplace add pbakaus/impeccable</code>
+      <p class="hint">Claude Code เท่านั้น: เพิ่ม marketplace, ติดตั้ง แล้วรัน <code>/impeccable init</code></p>
+    </div>
+
+    <div class="install">
+      <h2>ทางเลือก: git submodule</h2>
+      <code>git submodule add https://github.com/pbakaus/impeccable .impeccable</code>
+      <code>npx impeccable link --source=.impeccable --providers=claude,cursor</code>
+      <code>git submodule update --remote .impeccable</code>
+      <p class="hint">ใช้ Git แทน <code>npx impeccable update</code>; <code>link</code> สร้าง symlink</p>
+    </div>
+
+    <div class="install">
+      <h2>เรียกใช้</h2>
+      <code>/impeccable &lt;command&gt; &lt;target&gt;</code>
+      <code>/impeccable audit blog</code>
+      <code>/impeccable critique landing</code>
+      <code>$impeccable audit blog</code>
+      <p class="hint">Claude Code/Cursor/Copilot ใช้ <code>/impeccable</code>; Codex ใช้ <code>$impeccable</code>; ใช้ <code>pin</code> เมื่อต้องเรียกซ้ำ</p>
+    </div>
+
+    <div class="install">
+      <h2>ข้อมูลการใช้งาน</h2>
+      <code>npx impeccable telemetry status</code>
+      <code>npx impeccable telemetry off</code>
+      <code>DO_NOT_TRACK=1</code>
+      <code>IMPECCABLE_NO_TELEMETRY=1</code>
+      <p class="hint">เปิดโดยค่าเริ่มต้น; ปิดด้วยคำสั่งด้านบน, <code>DO_NOT_TRACK=1</code> หรือ <code>telemetry: false</code></p>
+    </div>
+
+  </section>
+
+  <section class="index" aria-label="รายการทั้งหมด">
+    <h2 class="sr-only">รายการทั้งหมด</h2>
+    <ol id="list" class="list"></ol>
+    <p class="empty" id="empty" hidden>ไม่พบรายการที่ตรงกับคำค้น ลองใช้คำสั้นลง หรือกด &ldquo;ทั้งหมด&rdquo;</p>
+
+  </section>
+
+  <aside id="detail" class="detail" aria-label="รายละเอียด" aria-live="polite"></aside>
+
+</main>
+
+<footer class="foot">
+  <span></span>
+  <span class="foot-meta">impeccable 4.7.0 · Apache-2.0</span>
+  <span>ที่มา <code>mcps/impeccable</code> · github.com/pbakaus/impeccable (Apache-2.0)</span>
+</footer>
+
+<noscript>
+  <p style="padding:24px">หน้านี้ต้องใช้ JavaScript เพื่อแสดงรายการ 52 รายการ</p>
+</noscript>
+
+<script src="../index.js" defer></script>
+</body>
+</html>

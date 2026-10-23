@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="caveman 4.0.1 — 6 สวิตช์, 6 กฎ, 7 skills และ 10 CLI commands">
+<title>caveman — skillsheet 4.0.1</title>
+<link rel="stylesheet" href="../index.css">
+</head>
+<body class="page-caveman-docs" data-page="caveman-docs">
+
+<header class="masthead">
+  <div>
+    <h1>caveman</h1>
+    <p class="lede">ลดความยาวคำตอบและบริบท โดยคงความแม่นยำของโค้ด</p>
+  </div>
+  <dl class="stamp">
+    <div><dt>เวอร์ชัน</dt><dd>4.0.1</dd></div>
+    <div><dt>สวิตช์</dt><dd>6</dd></div>
+    <div><dt>รายการ</dt><dd>40</dd></div>
+    <div><dt>เอเจนต์</dt><dd>30+</dd></div>
+  </dl>
+</header>
+
+<main class="sheet">
+
+  <section class="rail" aria-label="ค้นหาและกรองรายการ">
+    <label for="search">ค้นหา</label>
+    <input id="search" type="search" placeholder="ชื่อสวิตช์ คำสั่ง หรือตัวเลข" autocomplete="off" spellcheck="false">
+
+
+    <nav class="flow-nav" aria-label="เส้นทางงาน">
+      <p class="flow-nav-label">เส้นทางงาน</p>
+      <div id="flow" class="flow-steps"></div>
+    </nav>
+    <p class="status" id="status" role="status" aria-live="polite">ทั้งหมด · 40 จาก 40 รายการ</p>
+
+    <div class="install">
+      <h2>ติดตั้ง</h2>
+      <code>npx @caveman-ai/cli@latest</code>
+      <code>npx skills add JuliusBrussee/caveman -g</code>
+      <code>claude plugin marketplace add JuliusBrussee/caveman &amp;&amp; claude plugin install caveman@caveman</code>
+      <code>gemini extensions install https://github.com/JuliusBrussee/caveman</code>
+      <code>irm https://raw.githubusercontent.com/JuliusBrussee/caveman/v4.0.1/install.ps1 | iex</code>
+    </div>
+
+    <div class="install">
+      <h2>ต้องมี</h2>
+      <code>Node.js 22.13+</code>
+      <code>6 สวิตช์เปิดหลังติดตั้ง · ปิดทีละตัวด้วย caveman off &lt;name&gt;</code>
+    </div>
+
+  </section>
+
+  <section class="index" aria-label="รายการทั้งหมด">
+    <h2 class="sr-only">รายการทั้งหมด</h2>
+    <ol id="list" class="list"></ol>
+    <p class="empty" id="empty" hidden>ไม่พบรายการที่ตรงกับคำค้น ลองใช้คำสั้นลง หรือกด &ldquo;ทั้งหมด&rdquo;</p>
+
+  </section>
+
+  <aside id="detail" class="detail" aria-label="รายละเอียด" aria-live="polite"></aside>
+
+</main>
+
+<footer class="foot">
+  <span></span>
+  <span class="foot-meta">caveman 4.0.1 · Apache-2.0</span>
+  <span>ที่มา <code>github.com/JuliusBrussee/caveman</code> (Apache-2.0 · LICENSE-MIT สำหรับส่วนก่อน 3.0)</span>
+</footer>
+
+<noscript>
+  <p style="padding:24px">หน้านี้ต้องใช้ JavaScript เพื่อแสดงรายการ 40 รายการ</p>
+</noscript>
+
+<script src="../index.js" defer></script>
+</body>
+</html>

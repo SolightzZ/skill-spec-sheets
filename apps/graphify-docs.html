@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="graphify 0.9.93 — 16 คำสั่งสร้างและถาม knowledge graph">
+<title>graphify — command sheet 0.9.93</title>
+<link rel="stylesheet" href="../index.css">
+</head>
+<body class="page-graphify-docs" data-page="graphify-docs">
+
+<header class="masthead">
+  <div>
+    <h1>graphify</h1>
+    <p class="lede">สร้าง knowledge graph ในเครื่อง แล้วถามเส้นทางและความสัมพันธ์จากข้อมูล</p>
+  </div>
+  <dl class="stamp">
+    <div><dt>เวอร์ชัน</dt><dd>0.9.93</dd></div>
+    <div><dt>คำสั่งในหน้า</dt><dd>16</dd></div>
+    <div><dt>ภาษา</dt><dd>~40</dd></div>
+    <div><dt>สัญญาอนุญาต</dt><dd>Apache-2.0</dd></div>
+  </dl>
+</header>
+
+<main class="sheet">
+
+  <section class="rail" aria-label="ค้นหาและติดตั้ง">
+    <label for="search">ค้นหาคำสั่ง</label>
+    <input id="search" type="search" placeholder="สร้าง ถาม path update PR export" autocomplete="off" spellcheck="false">
+
+
+    <nav class="flow-nav" aria-label="เส้นทางงาน">
+      <p class="flow-nav-label">เส้นทางงาน</p>
+      <div id="flow" class="flow-steps"></div>
+    </nav>
+    <p class="status" id="status" role="status" aria-live="polite">16 จาก 16 คำสั่ง</p>
+
+    <div class="install">
+      <h2>ติดตั้ง</h2>
+      <code>uv tool install graphifyy</code>
+      <code>graphify install</code>
+
+      <h2>ติดตั้งระดับโปรเจกต์</h2>
+      <code>graphify install --project</code>
+      <code>graphify install --platform opencode</code>
+
+      <h2>เพิ่มความสามารถ</h2>
+      <code>uv tool install "graphifyy[pdf]"</code>
+      <code>uv tool install "graphifyy[video]"</code>
+
+      <h2>ผลลัพธ์</h2>
+      <code>graphify-out/graph.html</code>
+      <code>graphify-out/GRAPH_REPORT.md</code>
+      <code>graphify-out/graph.json</code>
+
+      <p class="hint">ต้องมี Python 3.10+ และ uv/pipx. PyPI ใช้ชื่อ <code>graphifyy</code>; CLI ใช้ <code>graphify</code></p>
+    </div>
+
+  </section>
+
+  <section class="index" aria-label="รายการคำสั่ง">
+    <h2 class="sr-only">คำสั่งทั้งหมด</h2>
+    <ol id="list" class="list"></ol>
+    <p class="empty" id="empty" hidden>ไม่พบคำสั่งที่ตรงกับคำค้นหรือหมวดที่เลือก ลองใช้คำสั้นลง หรือเลือกทั้งหมด</p>
+
+    <section class="signals" aria-label="ไฟล์ที่ได้จากกราฟ">
+      <h2>สามไฟล์ที่ได้</h2>
+      <ul>
+        <li><code>graph.html</code> เปิดใน browser คลิกโหนด กรอง และค้นหา</li>
+        <li><code>GRAPH_REPORT.md</code> god nodes, communities และ surprising connections</li>
+        <li><code>graph.json</code> query, path, explain ซ้ำได้โดยไม่ต้องอ่านไฟล์ดิบ</li>
+      </ul>
+    </section>
+
+  </section>
+
+  <aside id="detail" class="detail" aria-label="รายละเอียดคำสั่ง" aria-live="polite"></aside>
+
+</main>
+
+<footer class="foot">
+  <span></span>
+  <span class="foot-meta">graphify 0.9.93 · Apache-2.0</span>
+  <span>ที่มา <code>github.com/Graphify-Labs/graphify</code> · PyPI <code>graphifyy</code></span>
+</footer>
+
+<noscript>
+  <p style="padding:24px">หน้านี้ต้องใช้ JavaScript เพื่อแสดงคำสั่งทั้ง 16 รายการ</p>
+</noscript>
+
+<script src="../index.js" defer></script>
+</body>
+</html>

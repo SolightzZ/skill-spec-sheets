@@ -1,0 +1,90 @@
+{
+  "stem": "impeccable-docs",
+  "title": "impeccable — skillsheet 4.7.0",
+  "description": "Impeccable 4.7.0 — 24 คำสั่งและ 61 กฎตรวจสำหรับงาน UI",
+  "masthead": {
+    "title": "impeccable",
+    "lede": "คำสั่งสำหรับออกแบบ ตรวจ และปรับปรุง UI พร้อม detector และ live mode",
+    "stamp": [
+      {
+        "label": "เวอร์ชัน",
+        "value": "4.7.0"
+      },
+      {
+        "label": "รายการ",
+        "value": "52"
+      },
+      {
+        "label": "กฎใน registry",
+        "value": "61"
+      },
+      {
+        "label": "อัปเดต",
+        "value": "23 ต.ค. 2026"
+      }
+    ]
+  },
+  "rail": {
+    "ariaLabel": "ค้นหาและกรองรายการ",
+    "label": "ค้นหา",
+    "placeholder": "ชื่อคำสั่ง โหมด หลักการ หรือกฎ",
+    "filters": {
+      "mode": "none",
+      "className": "",
+      "ariaLabel": "กรองตามหมวด",
+      "chips": [
+        {
+          "cat": "all",
+          "label": "ทั้งหมด",
+          "count": 52,
+          "pressed": "true"
+        },
+        {
+          "cat": "command",
+          "label": "คำสั่ง",
+          "count": 29,
+          "pressed": "false"
+        },
+        {
+          "cat": "mode",
+          "label": "โหมด",
+          "count": 4,
+          "pressed": "false"
+        },
+        {
+          "cat": "principle",
+          "label": "หลักการ",
+          "count": 7,
+          "pressed": "false"
+        },
+        {
+          "cat": "rule",
+          "label": "กฎตรวจ",
+          "count": 6,
+          "pressed": "false"
+        },
+        {
+          "cat": "cli",
+          "label": "CLI",
+          "count": 6,
+          "pressed": "false"
+        }
+      ]
+    },
+    "status": "52 จาก 52 รายการ"
+  },
+  "index": {
+    "ariaLabel": "รายการทั้งหมด",
+    "srTitle": "รายการทั้งหมด",
+    "empty": "ไม่พบรายการที่ตรงกับคำค้น ลองใช้คำสั้นลง หรือกด &ldquo;ทั้งหมด&rdquo;"
+  },
+  "detail": {
+    "ariaLabel": "รายละเอียด"
+  },
+  "footer": {
+    "note": "",
+    "meta": "impeccable 4.7.0 · Apache-2.0",
+    "source": "ที่มา <code>mcps/impeccable</code> · github.com/pbakaus/impeccable (Apache-2.0)"
+  },
+  "noscript": "หน้านี้ต้องใช้ JavaScript เพื่อแสดงรายการ 52 รายการ"
+}

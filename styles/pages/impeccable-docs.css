@@ -1,0 +1,165 @@
+/* impeccable-docs */
+body.page-impeccable-docs .masthead {
+  background: var(--pine);
+  color: var(--paper);
+  padding: clamp(28px, 6vw, 64px) clamp(20px, 5vw, 56px);
+  display: grid;
+  gap: clamp(28px, 4vw, 56px);
+  grid-template-columns: minmax(0, 1fr);
+  align-items: end;
+}
+body.page-impeccable-docs .masthead > div {
+  min-width: 0;
+}
+body.page-impeccable-docs .masthead h1 {
+  font-family: var(--display);
+  font-stretch: 87.5%;
+  font-weight: 700;
+  font-size: clamp(3rem, 10.5vw, 6.75rem);
+  line-height: 0.82;
+  letter-spacing: -0.025em;
+  margin-bottom: 0.35em;
+}
+body.page-impeccable-docs .lede {
+  margin: 0;
+  max-width: 48ch;
+  color: #c9d3cb;
+  font-size: clamp(0.9375rem, 1.1vw, 1.0625rem);
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+}
+@media (min-width: 900px) {
+  body.page-impeccable-docs .stamp {
+    border-top: 0;
+    border-left: 1px solid rgba(232, 234, 227, 0.35);
+    padding-top: 0;
+    padding-left: 28px;
+    min-width: 16rem;
+  }
+}
+body.page-impeccable-docs #filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 14px 0 0;
+}
+body.page-impeccable-docs .chip {
+  font: inherit;
+  font-size: 0.8125rem;
+  color: var(--ink);
+  background: transparent;
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  padding: 5px 11px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: baseline;
+  gap: 6px;
+  transition:
+    background-color 0.12s ease,
+    border-color 0.12s ease;
+}
+body.page-impeccable-docs .chip:hover {
+  background: var(--panel);
+}
+body.page-impeccable-docs .chip[aria-pressed="true"] {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: var(--paper);
+}
+body.page-impeccable-docs .chip .count {
+  font-family: var(--data);
+  font-size: 0.75rem;
+  opacity: 0.7;
+}
+body.page-impeccable-docs .status {
+  margin: 16px 0 0;
+  font-size: 0.8125rem;
+  color: var(--muted);
+}
+body.page-impeccable-docs .install {
+  margin-top: 28px;
+  padding-top: 18px;
+  border-top: 1px solid var(--rule);
+}
+body.page-impeccable-docs .install code + code {
+  margin-top: 6px;
+  color: var(--muted);
+}
+body.page-impeccable-docs .row {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  column-gap: 16px;
+  row-gap: 3px;
+  width: 100%;
+  text-align: left;
+  font: inherit;
+  color: inherit;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid var(--rule);
+  padding: 15px 12px 15px 20px;
+  cursor: pointer;
+}
+body.page-impeccable-docs .row .name {
+  font-family: var(--display);
+  font-stretch: 90%;
+  font-size: 1.0625rem;
+  font-weight: 600;
+  letter-spacing: -0.005em;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+}
+body.page-impeccable-docs .row[data-cat="command"] {
+  --cat-color: var(--signal);
+}
+body.page-impeccable-docs .row[data-cat="mode"] {
+  --cat-color: var(--pine);
+}
+body.page-impeccable-docs .row[data-cat="principle"] {
+  --cat-color: var(--ochre);
+}
+body.page-impeccable-docs .row[data-cat="detector"] {
+  --cat-color: var(--plum);
+}
+body.page-impeccable-docs .row[data-cat="cli"] {
+  --cat-color: var(--muted);
+}
+body.page-impeccable-docs .detail-card h2 {
+  font-family: var(--display);
+  font-stretch: 90%;
+  font-size: clamp(1.25rem, 2.2vw, 1.625rem);
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  overflow-wrap: anywhere;
+}
+body.page-impeccable-docs .detail-cat[data-cat="command"] {
+  background: #dde7ee;
+}
+body.page-impeccable-docs .detail-cat[data-cat="mode"] {
+  background: #dfe7e2;
+}
+body.page-impeccable-docs .detail-cat[data-cat="principle"] {
+  background: #ece6d4;
+}
+body.page-impeccable-docs .detail-cat[data-cat="detector"] {
+  background: #e7e1ee;
+}
+body.page-impeccable-docs .detail-cat[data-cat="cli"] {
+  background: #e6e6e0;
+}
+body.page-impeccable-docs .fm div {
+  display: grid;
+  grid-template-columns: 4.5rem minmax(0, 1fr);
+  gap: 10px;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--rule);
+}
+@media (prefers-reduced-motion: reduce) {
+  body.page-impeccable-docs .chip,
+  body.page-impeccable-docs .row::before {
+    transition: none;
+  }
+}
+

@@ -1,0 +1,89 @@
+/* Base tokens, reset, typography, focus, and utilities. */
+/* ==========================================================================
+   Shared docs theme. Base rules are shared by every root documentation page.
+   Page-only rules are scoped with body.page-* so styles cannot collide.
+   ========================================================================== */
+
+:root {
+  --ink: #101b19;
+  --paper: #e8eae3;
+  --panel: #f1f2ec;
+  --rule: #c6cbbf;
+  --pine: #14403a;
+  --signal: #1f5f8b;
+  --ochre: #8a6a1f;
+  --plum: #6b4e8a;
+  --rust: #8a4a2f;
+  --teal: #2f6b5f;
+  --muted: #56625c;
+  /* Semantic color roles: quiet canvas, elevated surface, action, and state. */
+  --surface-canvas: var(--paper);
+  --surface-raised: var(--panel);
+  --action: var(--signal);
+  --state-active: var(--teal);
+  --state-warning: var(--ochre);
+  --state-danger: var(--rust);
+  --display:
+    "Bahnschrift", "DIN Alternate", "Segoe UI", "Leelawadee UI", sans-serif;
+  --body: "Segoe UI", "Leelawadee UI", system-ui, sans-serif;
+  --data: "Consolas", "Cascadia Mono", "Courier New", monospace;
+  --body-size: 1rem;
+  --reading-leading: 1.8;
+  --reading-measure: 68ch;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--surface-canvas);
+  color: var(--ink);
+  -webkit-text-size-adjust: 100%;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+body {
+  margin: 0;
+  font-family: var(--body);
+  font-size: var(--body-size);
+  line-height: 1.6;
+  font-kerning: normal;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-weight: 600;
+}
+
+a {
+  color: var(--signal);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+:focus-visible {
+  outline: 2px solid var(--action);
+  outline-offset: 2px;
+}
+
+
+/* ---------- utilities ---------- */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}

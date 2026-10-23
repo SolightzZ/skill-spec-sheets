@@ -1,0 +1,50 @@
+{
+  "stem": "taste-skill-docs",
+  "title": "taste skill — art direction, not average",
+  "description": "taste skill 2.1.4 — 20 art directions, 10 steps และ 247 เว็บอ้างอิง",
+  "masthead": {
+    "title": "taste skill",
+    "lede": "สร้าง art direction จากวัตถุดิบจริง แล้วตรวจผลด้วย screenshot",
+    "stamp": [
+      {
+        "label": "เวอร์ชัน",
+        "value": "2.1.4"
+      },
+      {
+        "label": "ทิศทาง",
+        "value": "20"
+      },
+      {
+        "label": "เว็บศึกษา",
+        "value": "247"
+      },
+      {
+        "label": "รายการ",
+        "value": "12"
+      }
+    ]
+  },
+  "rail": {
+    "ariaLabel": "ค้นหาและติดตั้ง",
+    "label": "ค้นหาก้าว",
+    "placeholder": "inventory direction gate app",
+    "filters": {
+      "mode": "none"
+    },
+    "status": "12 จาก 12 ขั้น"
+  },
+  "index": {
+    "ariaLabel": "รายการก้าว",
+    "srTitle": "สิบก้าวของ taste skill และเส้นทาง app screen",
+    "empty": "ไม่พบก้าวที่ตรงกับคำค้น ลองใช้คำสั้นลง หรือล้างช่องค้นหา"
+  },
+  "detail": {
+    "ariaLabel": "รายละเอียดก้าว"
+  },
+  "footer": {
+    "note": "",
+    "meta": "taste-skill 2.1.4 · MIT",
+    "source": "ที่มา <code>github.com/Leonxlnx/taste-skill</code>"
+  },
+  "noscript": "หน้านี้ต้องใช้ JavaScript เพื่อแสดงทั้ง 12 รายการ"
+}

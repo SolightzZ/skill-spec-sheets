@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="superpowers 7.0.0 — 15 skills สำหรับกระบวนการ โค้ด และพื้นฐาน">
+<title>superpowers — skillsheet 7.0.0</title>
+<link rel="stylesheet" href="../index.css">
+</head>
+<body class="page-superpowers-docs" data-page="superpowers-docs">
+
+<header class="masthead">
+  <div>
+    <h1>superpowers</h1>
+    <p class="lede">ทำงานเป็นลำดับ: คุยสเปก เทสก่อนโค้ด และตรวจหลักฐานก่อนปิดงาน</p>
+  </div>
+  <dl class="stamp">
+    <div><dt>เวอร์ชัน</dt><dd>7.0.0</dd></div>
+    <div><dt>คอมมิต</dt><dd>b739a8a</dd></div>
+    <div><dt>ทักษะหลัก</dt><dd>15</dd></div>
+    <div><dt>อัปเดต</dt><dd>20 ต.ค. 2026</dd></div>
+  </dl>
+</header>
+
+<main class="sheet">
+
+  <section class="rail" aria-label="ค้นหาและกรองทักษะ">
+    <label for="search">ค้นหาทักษะ</label>
+    <input id="search" type="search" placeholder="ชื่อ หรือสิ่งที่อยากทำ" autocomplete="off" spellcheck="false">
+
+
+    <nav class="flow-nav" aria-label="เส้นทางงาน">
+      <p class="flow-nav-label">เส้นทางงาน</p>
+      <div id="flow" class="flow-steps"></div>
+    </nav>
+    <p class="status" id="status" role="status" aria-live="polite">15 จาก 15 ทักษะ</p>
+
+    <div class="install">
+      <h2>Claude Code</h2>
+      <code>/plugin install superpowers@claude-plugins-official</code>
+      <p class="hint">ทางเลือก: เพิ่ม marketplace ก่อน</p>
+      <code>/plugin marketplace add obra/superpowers-marketplace</code>
+      <code>/plugin install superpowers@superpowers-marketplace</code>
+    </div>
+
+    <div class="install">
+      <h2>OpenCode</h2>
+      <code>Fetch and follow instructions from https://raw.githubusercontent.com/obra/superpowers/refs/heads/main/.opencode/INSTALL.md</code>
+      <p class="hint">OpenCode ติดตั้งแยกจากเครื่องมืออื่น</p>
+    </div>
+
+    <div class="install">
+      <h2>เครื่องมืออื่น</h2>
+      <code>gemini extensions install https://github.com/obra/superpowers</code>
+      <code>copilot plugin install superpowers@superpowers-marketplace</code>
+      <p class="hint">แต่ละเครื่องมือใช้คำสั่งติดตั้งของตัวเอง</p>
+    </div>
+
+  </section>
+
+  <section class="index" aria-label="รายการทักษะ">
+    <h2 class="sr-only">รายการทักษะทั้งหมด</h2>
+    <ol id="list" class="list"></ol>
+    <p class="empty" id="empty" hidden>ไม่พบทักษะที่ตรงกับคำค้น ลองใช้คำสั้นลง หรือกด &ldquo;ทั้งหมด&rdquo;</p>
+
+  </section>
+
+  <aside id="detail" class="detail" aria-label="รายละเอียดทักษะ" aria-live="polite"></aside>
+
+</main>
+
+<footer class="foot">
+  <span></span>
+  <span class="foot-meta">superpowers 7.0.0 · MIT</span>
+  <span>ที่มา <code>github.com/obra/superpowers</code></span>
+</footer>
+
+<noscript>
+  <p style="padding:24px">หน้านี้ต้องใช้ JavaScript เพื่อแสดงรายการ 15 ทักษะ</p>
+</noscript>
+
+<script src="../index.js" defer></script>
+</body>
+</html>

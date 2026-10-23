@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="karpathy-guidelines 1.0.0 — 4 หลักการลดการเดาและการแก้เกินของเอเจนต์">
+<title>karpathy-guidelines — skillsheet 1.0.0</title>
+<link rel="stylesheet" href="../index.css">
+</head>
+<body class="page-andrej-karpathy-skills-docs" data-page="andrej-karpathy-skills-docs">
+
+<header class="masthead">
+  <div>
+    <h1>karpathy-guidelines</h1>
+    <p class="lede">4 หลักการ: คิดก่อนถามก่อน, เขียนเท่าที่จำเป็น, แตะเฉพาะส่วนที่ต้องแก้ และตั้งเกณฑ์สำเร็จที่ตรวจได้</p>
+  </div>
+  <dl class="stamp">
+    <div><dt>เวอร์ชัน</dt><dd>1.0.0</dd></div>
+    <div><dt>รายการ</dt><dd>5</dd></div>
+    <div><dt>สกิล</dt><dd>1</dd></div>
+    <div><dt>หลักการ</dt><dd>4</dd></div>
+    <div><dt>สัญญาอนุญาต</dt><dd>MIT</dd></div>
+  </dl>
+</header>
+
+<main class="sheet">
+
+  <section class="rail" aria-label="ค้นหาสกิลและหลักการ">
+    <label for="search">ค้นหาสกิลและหลักการ</label>
+    <input id="search" type="search" placeholder="ชื่อหลักการ ปัญหา หรือคำที่อยากทำ" autocomplete="off" spellcheck="false">
+
+
+    <nav class="flow-nav" aria-label="เส้นทางงาน">
+      <p class="flow-nav-label">เส้นทางงาน</p>
+      <div id="flow" class="flow-steps"></div>
+    </nav>
+    <p class="status" id="status" role="status" aria-live="polite">ทั้งหมด · 5 จาก 5 รายการ</p>
+
+    <div class="install">
+      <h2>ติดตั้งเป็น plugin</h2>
+      <code>/plugin marketplace add forrestchang/andrej-karpathy-skills</code>
+      <code>/plugin install andrej-karpathy-skills@karpathy-skills</code>
+
+      <h2>หรือใช้กับโปรเจกต์</h2>
+      <code>curl -o CLAUDE.md https://raw.githubusercontent.com/forrestchang/andrej-karpathy-skills/main/CLAUDE.md</code>
+
+      <h2>ไฟล์ในรีโป</h2>
+      <code>CLAUDE.md</code>
+      <code>skills/karpathy-guidelines/SKILL.md</code>
+
+      <p class="hint">งานเล็กใช้ดุลพินิจได้; ชุดนี้เน้นความรอบคอบ</p>
+
+      <h2>อ่านอย่างไร</h2>
+      <p class="hint"><strong>skill</strong> = <code>SKILL.md</code> ที่รวม 4 หลักการ</p>
+      <p class="hint"><strong>วิธีเรียก</strong> ใช้ผ่าน plugin หรือวาง <code>CLAUDE.md</code></p>
+      <p class="hint"><strong>prompt</strong> เติมบริบทของคุณได้</p>
+    </div>
+
+  </section>
+
+  <section class="index" aria-label="รายการสกิลและหลักการ">
+    <h2 class="sr-only">karpathy-guidelines และหลักการทั้งสี่ข้อ</h2>
+    <ol id="list" class="list"></ol>
+    <p class="empty" id="empty" hidden>ไม่พบรายการที่ตรงกับคำค้น ลองใช้คำสั้นลง หรือล้างช่องค้นหา</p>
+
+    <section class="signals" aria-label="สัญญาณว่าหลักการกำลังทำงาน">
+      <h2>สัญญาณว่ากำลังทำงาน</h2>
+      <ul>
+        <li>diff มีแต่การเปลี่ยนแปลงที่ขอ</li>
+        <li>ไม่ต้องเขียนใหม่เพราะซับซ้อนเกินแต่แรก</li>
+        <li>คำถามมาก่อนลงมือ ไม่ใช่หลังพลาด</li>
+        <li>PR เล็ก สะอาด ไม่มี drive-by refactor</li>
+      </ul>
+    </section>
+
+  </section>
+
+  <aside id="detail" class="detail" aria-label="รายละเอียดสกิลและหลักการ" aria-live="polite"></aside>
+
+</main>
+
+<footer class="foot">
+  <span></span>
+  <span class="foot-meta">karpathy-guidelines 1.0.0 · MIT</span>
+  <span>ที่มา <code>github.com/forrestchang/andrej-karpathy-skills</code> (MIT)</span>
+</footer>
+
+<noscript>
+  <p style="padding:24px">หน้านี้ต้องใช้ JavaScript เพื่อแสดงสกิลและหลักการทั้ง 5 รายการ</p>
+</noscript>
+
+<script src="../index.js" defer></script>
+</body>
+</html>

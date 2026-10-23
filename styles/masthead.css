@@ -1,0 +1,65 @@
+/* Late shared overrides and bolder masthead. Must load last. */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+@media (min-width: 900px) {
+  body[data-page]:not(.page-index) .masthead {
+    grid-template-columns: minmax(0, 1fr) auto;
+  }
+}
+
+/* Bolder masthead: the title becomes the cover band, then the lede and
+   data stamp share a quieter lower row. */
+body[data-page]:not(.page-index) .masthead h1 {
+  padding-bottom: 0.14em;
+  border-bottom: 1px solid rgba(232, 234, 227, 0.5);
+}
+body[data-page]:not(.page-index) .masthead {
+  box-shadow: inset 0 -5px 0 var(--page-accent, var(--signal));
+}
+body.page-agent-skills-docs { --page-accent: var(--signal); }
+body.page-andrej-karpathy-skills-docs { --page-accent: var(--plum); }
+body.page-caveman-docs { --page-accent: var(--teal); }
+body.page-graphify-docs { --page-accent: var(--signal); }
+body.page-impeccable-docs { --page-accent: var(--rust); }
+body.page-matt-pocock-docs { --page-accent: var(--ochre); }
+body.page-Model-Context-Protocol-servers-docs { --page-accent: var(--pine); }
+body.page-ponytail-docs { --page-accent: var(--pine); }
+body.page-security-audit-skill-docs { --page-accent: var(--rust); }
+body.page-superpowers-docs { --page-accent: var(--plum); }
+body.page-taste-skill-docs { --page-accent: var(--ochre); }
+body.page-ui-ux-pro-max-skill-docs { --page-accent: var(--teal); }
+@media (min-width: 900px) {
+  body[data-page]:not(.page-index) .masthead {
+    grid-template-columns: minmax(0, 1fr) clamp(16rem, 24vw, 21rem);
+    grid-template-areas:
+      "title title"
+      "lede stamp";
+    column-gap: clamp(24px, 5vw, 80px);
+    row-gap: 24px;
+    align-items: start;
+    padding: clamp(28px, 5vw, 56px) clamp(20px, 5vw, 56px);
+  }
+  body[data-page]:not(.page-index) .masthead > div {
+    display: contents;
+  }
+  body[data-page]:not(.page-index) .masthead h1 {
+    grid-area: title;
+    min-width: 0;
+    margin-bottom: 0;
+  }
+  body[data-page]:not(.page-index) .lede {
+    grid-area: lede;
+    min-width: 0;
+  }
+  body[data-page]:not(.page-index) .stamp {
+    grid-area: stamp;
+  }
+}
+@media (min-width: 1440px) {
+  body[data-page]:not(.page-index) .masthead h1 {
+    font-size: 7rem;
+  }
+}

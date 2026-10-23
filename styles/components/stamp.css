@@ -1,0 +1,21 @@
+/* Masthead data stamp. */
+.stamp {
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px 28px;
+  border-top: 1px solid rgba(232, 234, 227, 0.35);
+  padding-top: 16px;
+}
+.stamp dt {
+  font-size: 0.75rem;
+  color: #9fb0a6;
+  margin: 0 0 2px;
+}
+.stamp dd {
+  margin: 0;
+  font-family: var(--data);
+  font-size: 0.875rem;
+  color: var(--paper);
+  overflow-wrap: anywhere;
+}

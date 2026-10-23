@@ -1,0 +1,50 @@
+{
+  "stem": "agent-skills-docs",
+  "title": "agent-skills — skillsheet 0.6.13",
+  "description": "agent-skills 0.6.13 — 25 skills, 9 commands และ 4 บทบาท",
+  "masthead": {
+    "title": "agent-skills",
+    "lede": "workflow ตั้งแต่เก็บโจทย์ วางแผน เขียนโค้ด ตรวจงาน และปล่อยงาน",
+    "stamp": [
+      {
+        "label": "เวอร์ชัน",
+        "value": "0.6.13"
+      },
+      {
+        "label": "รายการ",
+        "value": "38"
+      },
+      {
+        "label": "คำสั่ง",
+        "value": "9"
+      },
+      {
+        "label": "บทบาท",
+        "value": "4"
+      }
+    ]
+  },
+  "rail": {
+    "ariaLabel": "ค้นหาและกรอง",
+    "label": "ค้นหา",
+    "placeholder": "ชื่อหรือสิ่งที่อยากทำ",
+    "filters": {
+      "mode": "none"
+    },
+    "status": "38 จาก 38 รายการ"
+  },
+  "index": {
+    "ariaLabel": "รายการทั้งหมด",
+    "srTitle": "รายการทั้งหมด",
+    "empty": "ไม่พบรายการที่ตรงกับคำค้น ลองใช้คำสั้นลง หรือกด &ldquo;ทั้งหมด&rdquo;"
+  },
+  "detail": {
+    "ariaLabel": "รายละเอียด"
+  },
+  "footer": {
+    "note": "",
+    "meta": "",
+    "source": "ที่มา <code>github.com/addyosmani/agent-skills</code> · <a href=\"https://skills.addy.ie/\" target=\"_blank\" rel=\"noreferrer\">เว็บไซต์หลัก</a>"
+  },
+  "noscript": "หน้านี้ต้องใช้ JavaScript เพื่อแสดงรายการ 38 รายการ"
+}

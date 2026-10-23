@@ -1,0 +1,158 @@
+/* Detail panel, field manual, and card motion. */
+.detail {
+  grid-area: detail;
+  padding: 20px;
+  display: none;
+  scroll-margin-top: 12px;
+}
+.detail.is-active {
+  display: block;
+}
+@media (min-width: 1200px) {
+  .detail {
+    display: block;
+    padding: 32px 28px;
+    position: sticky;
+    top: 0;
+    align-self: start;
+    max-height: 100vh;
+    overflow-y: auto;
+  }
+}
+/* Keep the document scrollbar as the only visible one. The rail and detail
+   still scroll when their content is taller than the viewport. */
+.rail,
+.detail {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.rail::-webkit-scrollbar,
+.detail::-webkit-scrollbar {
+  display: none;
+}
+.detail-card {
+  border: 1px solid var(--rule);
+  background: var(--panel);
+  padding: 20px;
+}
+.detail-cat {
+  display: inline-block;
+  font-size: 0.75rem;
+  color: var(--cat-color, var(--action));
+  border: 1px solid var(--cat-color, var(--rule));
+  background: color-mix(in srgb, var(--cat-color, var(--action)) 10%, var(--surface-raised));
+  border-radius: 999px;
+  padding: 2px 9px;
+  margin-bottom: 10px;
+}
+.doc-cat[data-cat="define"], .doc-cat[data-cat="files"], .doc-cat[data-cat="start"] { --cat-color: var(--signal); }
+.doc-cat[data-cat="plan"], .doc-cat[data-cat="mind"], .doc-cat[data-cat="concept"] { --cat-color: var(--plum); }
+.doc-cat[data-cat="build"], .doc-cat[data-cat="pipeline"], .doc-cat[data-cat="process"] { --cat-color: var(--pine); }
+.doc-cat[data-cat="verify"], .doc-cat[data-cat="query"], .doc-cat[data-cat="step"] { --cat-color: var(--teal); }
+.doc-cat[data-cat="review"], .doc-cat[data-cat="rule"], .doc-cat[data-cat="report"] { --cat-color: var(--rust); }
+.doc-cat[data-cat="ship"], .doc-cat[data-cat="export"], .doc-cat[data-cat="system"], .doc-cat[data-cat="proof"], .doc-cat[data-cat="cli"] { --cat-color: var(--ochre); }
+.doc-cat[data-cat="toggle"], .doc-cat[data-cat="verify"] { --cat-color: var(--teal); }
+.doc-cat[data-cat="rule"], .doc-cat[data-cat="review"] { --cat-color: var(--rust); }
+.doc-cat[data-cat="command"], .doc-cat[data-cat="protocol"] { --cat-color: var(--pine); }
+.doc-cat[data-cat="skill"], .doc-cat[data-cat="meta"] { --cat-color: var(--plum); }
+.detail-desc {
+  margin: 12px 0 0;
+  font-size: 0.9375rem;
+  line-height: 1.65;
+}
+.fm {
+  margin: 18px 0 0;
+  border-top: 1px solid var(--rule);
+  font-size: 0.8125rem;
+}
+.fm dt {
+  font-family: var(--data);
+  font-size: 0.75rem;
+  color: var(--muted);
+  padding-top: 1px;
+}
+.fm dd {
+  margin: 0;
+  line-height: 1.55;
+  overflow-wrap: anywhere;
+}
+.fm code {
+  font-family: var(--data);
+  font-size: 0.6875rem;
+}
+.detail-empty {
+  color: var(--muted);
+  font-size: 0.9375rem;
+  border: 1px dashed var(--rule);
+  padding: 20px;
+}
+.detail-empty strong {
+  display: block;
+  color: var(--ink);
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+.doc-flow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 12px;
+  align-items: center;
+  margin: 12px 0 0;
+  padding: 9px 0;
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+}
+.doc-flow-position {
+  color: var(--muted);
+  font-family: var(--data);
+  font-size: 0.75rem;
+}
+.detail-suggestion {
+  margin-top: 16px;
+}
+.detail-suggestion .doc-copy {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  font-size: 0.8125rem;
+  font-family: var(--data);
+  color: var(--ink);
+  background: var(--panel);
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  cursor: pointer;
+  white-space: normal;
+  line-height: 1.5;
+  max-width: 100%;
+}
+.detail-suggestion .doc-copy:hover {
+  border-color: var(--signal);
+}
+.detail-suggestion .doc-copy:focus-visible {
+  outline: 2px solid var(--signal);
+  outline-offset: 2px;
+}
+.doc-copy.is-copied {
+  border-color: var(--state-active);
+  color: var(--state-active);
+  background: color-mix(in srgb, var(--state-active) 10%, var(--surface-raised));
+}
+@keyframes card-in {
+  from {
+    opacity: 0;
+    transform: translateY(3px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.detail-card {
+  animation: card-in 0.16s ease-out;
+}
+@media (prefers-reduced-motion: reduce) {
+  .detail-card {
+    animation: none;
+  }
+}

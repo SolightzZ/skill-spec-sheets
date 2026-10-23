@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="security-audit skill — 6 phases และรายงานที่ตรวจซ้ำได้">
+<title>security audit — audit sheet</title>
+<link rel="stylesheet" href="../index.css">
+</head>
+<body class="page-security-audit-skill-docs" data-page="security-audit-skill-docs">
+
+<header class="masthead">
+  <div>
+    <h1>security audit</h1>
+    <p class="lede">6 phases สำหรับทำแผนที่ boundary, ตรวจ coverage, หักล้าง findings และสร้างรายงาน</p>
+  </div>
+  <dl class="stamp">
+    <div><dt>เฟส</dt><dd>6</dd></div>
+    <div><dt>รายการ</dt><dd>7</dd></div>
+    <div><dt>คอมมิต</dt><dd>c1c8a8c</dd></div>
+    <div><dt>สัญญาอนุญาต</dt><dd>MIT</dd></div>
+  </dl>
+</header>
+
+<main class="sheet">
+
+  <section class="rail" aria-label="ค้นหาและติดตั้ง">
+    <label for="search">ค้นหาเฟส</label>
+    <input id="search" type="search" placeholder="security-audit recon hunting schema report" autocomplete="off" spellcheck="false">
+
+
+    <nav class="flow-nav" aria-label="เส้นทางงาน">
+      <p class="flow-nav-label">เส้นทางงาน</p>
+      <div id="flow" class="flow-steps"></div>
+    </nav>
+    <p class="status" id="status" role="status" aria-live="polite">7 จาก 7 รายการ</p>
+
+    <div class="install">
+      <h2>ติดตั้ง</h2>
+      <code>npx skills add https://github.com/cloudflare/security-audit-skill --skill security-audit</code>
+
+      <h2>เรียกใช้</h2>
+      <code>security audit this codebase</code>
+
+      <p class="hint">ต้องมี parallel sub-agents, Node.js validator และ OS sandbox</p>
+      <p class="hint">full audit ครบ 6 เฟสเมื่อสั่ง audit หรือ pen-test</p>
+    </div>
+
+  </section>
+
+  <section class="index" aria-label="รายการสกิลและเฟส">
+    <h2 class="sr-only">security-audit skill และหกเฟส</h2>
+    <ol id="list" class="list"></ol>
+    <p class="empty" id="empty" hidden>ไม่พบรายการที่ตรงกับคำค้นหรือหมวดที่เลือก ลองใช้คำสั้นลง หรือเลือกทั้งหมด</p>
+
+    <section class="signals" aria-label="สามคำตัดสิน">
+      <h2>สามคำตัดสิน</h2>
+      <ul>
+        <li><code>confirmed</code> source trace ครบ + demonstrated impact; มี severity</li>
+        <li><code>needs_validation</code> source-grounded แต่ blocker ยังชี้ชัด; ไม่มี severity</li>
+        <li><code>rejected</code> ถูกหักล้างด้วย source หรือ local evidence; เก็บไว้กันอ้างซ้ำ</li>
+      </ul>
+    </section>
+
+    <section class="signals" aria-label="หลักที่ห้ามละ">
+      <h2>หลักที่ห้ามละ</h2>
+      <ul>
+        <li>ยืนยันเฉพาะ boundary failure ที่พิสูจน์ได้</li>
+        <li>เอเจนต์ที่ตรวจต้องไม่ใช่เอเจนต์ที่พบ</li>
+        <li>severity ต้องมาจาก impact ไม่ใช่ checklist deviation</li>
+        <li>defense-in-depth gap ที่มีชั้นอื่นกันอยู่ไม่ใช่ช่องโหว่</li>
+        <li>หลาย run เพิ่ม coverage; run เดียวไม่เท่ากับ exhaustive</li>
+      </ul>
+    </section>
+
+  </section>
+
+  <aside id="detail" class="detail" aria-label="รายละเอียดสกิลและเฟส" aria-live="polite"></aside>
+
+</main>
+
+<footer class="foot">
+  <span></span>
+  <span class="foot-meta">security-audit c1c8a8c · MIT</span>
+  <span>ที่มา <code>github.com/cloudflare/security-audit-skill</code> · MIT</span>
+</footer>
+
+<noscript>
+  <p style="padding:24px">หน้านี้ต้องใช้ JavaScript เพื่อแสดง 7 รายการ: security-audit skill และ 6 เฟส</p>
+</noscript>
+
+<script src="../index.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+/* Shared page footer. */
+.foot {
+  border-top: 1px solid var(--rule);
+  padding: 20px clamp(20px, 5vw, 56px) 32px;
+  color: var(--muted);
+  font-size: 0.8125rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 24px;
+  justify-content: space-between;
+}
+.foot code {
+  font-family: var(--data);
+  font-size: 0.75rem;
+}
+.foot-meta {
+  font-family: var(--data);
+  font-size: 0.75rem;
+}
+.foot-meta:empty {
+  display: none;
+}
+

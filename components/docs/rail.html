@@ -1,0 +1,12 @@
+  <section class="rail" aria-label="{{railAriaLabel}}">
+    <label for="search">{{railLabel}}</label>
+    <input id="search" type="search" placeholder="{{railPlaceholder}}" autocomplete="off" spellcheck="false">
+{{filters}}
+{{railExtra}}
+    <nav class="flow-nav" aria-label="เส้นทางงาน">
+      <p class="flow-nav-label">เส้นทางงาน</p>
+      <div id="flow" class="flow-steps"></div>
+    </nav>
+    <p class="status" id="status" role="status" aria-live="polite">{{status}}</p>
+{{install}}
+  </section>

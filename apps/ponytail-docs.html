@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="ponytail 5.3.2 — skills สำหรับงาน senior dev พร้อมคำสั่งและ benchmark">
+<title>ponytail — skillsheet 5.3.2</title>
+<link rel="stylesheet" href="../index.css">
+</head>
+<body class="page-ponytail-docs" data-page="ponytail-docs">
+
+<header class="masthead">
+  <div>
+    <h1>ponytail</h1>
+    <p class="lede">อ่านโค้ดก่อนลงมือ ลดงานเกินจำเป็น และตรวจผลลัพธ์</p>
+  </div>
+  <dl class="stamp">
+    <div><dt>เวอร์ชัน</dt><dd>5.3.2</dd></div>
+    <div><dt>คำสั่ง</dt><dd>6</dd></div>
+    <div><dt>หลักการ</dt><dd>7</dd></div>
+    <div><dt>สัญญาอนุญาต</dt><dd>MIT</dd></div>
+  </dl>
+</header>
+
+<main class="sheet">
+
+  <section class="rail" aria-label="ค้นหาและกรองรายการ">
+    <label for="search">ค้นหา</label>
+    <input id="search" type="search" placeholder="ชื่อคำสั่ง หลักการ หรือการติดตั้ง" autocomplete="off" spellcheck="false">
+
+
+    <nav class="flow-nav" aria-label="เส้นทางงาน">
+      <p class="flow-nav-label">เส้นทางงาน</p>
+      <div id="flow" class="flow-steps"></div>
+    </nav>
+    <p class="status" id="status" role="status" aria-live="polite">19 จาก 19 รายการ</p>
+
+    <div class="install">
+      <h2>ติดตั้ง · Claude Code</h2>
+      <code>/plugin marketplace add DietrichGebert/ponytail</code>
+      <code>/plugin install ponytail@ponytail</code>
+      <p class="hint">รันแยกกัน. ต้องมี <code>node</code> บน PATH สำหรับ hooks</p>
+    </div>
+
+    <div class="install">
+      <h2>ติดตั้ง · Codex</h2>
+      <code>codex plugin marketplace add DietrichGebert/ponytail</code>
+      <code>codex plugin add ponytail@ponytail</code>
+      <p class="hint">เปิด <code>/hooks</code> เพื่อ trust lifecycle hooks ก่อนเริ่ม thread</p>
+    </div>
+
+    <div class="install">
+      <h2>เอเจนต์อื่น</h2>
+      <code>npx skills add DietrichGebert/ponytail</code>
+      <p class="hint">หรือคัดลอก <code>AGENTS.md</code>; ขั้นตอนอื่นอยู่ใน <code>INSTALL.md</code></p>
+    </div>
+
+    <div class="install">
+      <h2>ตัวเลขจาก benchmark</h2>
+      <code>−53% โค้ด · −45% token</code>
+      <code>−26% cost · −41% เวลา</code>
+      <code>98% logic เสี่ยงมีเทส (baseline 68%)</code>
+      <p class="hint">39 tasks × 5 runs · Opus 5.5 เทียบกับ baseline</p>
+    </div>
+
+  </section>
+
+  <section class="index" aria-label="รายการทั้งหมด">
+    <h2 class="sr-only">รายการทั้งหมด</h2>
+    <ol id="list" class="list"></ol>
+    <p class="empty" id="empty" hidden>ไม่พบรายการที่ตรงกับคำค้น ลองใช้คำสั้นลง หรือกด &ldquo;ทั้งหมด&rdquo;</p>
+
+  </section>
+
+  <aside id="detail" class="detail" aria-label="รายละเอียด" aria-live="polite"></aside>
+
+</main>
+
+<footer class="foot">
+  <span></span>
+  <span class="foot-meta">ponytail 5.3.2 · MIT</span>
+  <span>ที่มา <code>github.com/DietrichGebert/ponytail</code> (MIT)</span>
+</footer>
+
+<noscript>
+  <p style="padding:24px">หน้านี้ต้องใช้ JavaScript เพื่อแสดงรายการ 19 รายการ</p>
+</noscript>
+
+<script src="../index.js" defer></script>
+</body>
+</html>

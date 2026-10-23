@@ -1,0 +1,54 @@
+{
+  "stem": "andrej-karpathy-skills-docs",
+  "title": "karpathy-guidelines — skillsheet 1.0.0",
+  "description": "karpathy-guidelines 1.0.0 — 4 หลักการลดการเดาและการแก้เกินของเอเจนต์",
+  "masthead": {
+    "title": "karpathy-guidelines",
+    "lede": "4 หลักการ: คิดก่อนถามก่อน, เขียนเท่าที่จำเป็น, แตะเฉพาะส่วนที่ต้องแก้ และตั้งเกณฑ์สำเร็จที่ตรวจได้",
+    "stamp": [
+      {
+        "label": "เวอร์ชัน",
+        "value": "1.0.0"
+      },
+      {
+        "label": "รายการ",
+        "value": "5"
+      },
+      {
+        "label": "สกิล",
+        "value": "1"
+      },
+      {
+        "label": "หลักการ",
+        "value": "4"
+      },
+      {
+        "label": "สัญญาอนุญาต",
+        "value": "MIT"
+      }
+    ]
+  },
+  "rail": {
+    "ariaLabel": "ค้นหาสกิลและหลักการ",
+    "label": "ค้นหาสกิลและหลักการ",
+    "placeholder": "ชื่อหลักการ ปัญหา หรือคำที่อยากทำ",
+    "filters": {
+      "mode": "none"
+    },
+    "status": "ทั้งหมด · 5 จาก 5 รายการ"
+  },
+  "index": {
+    "ariaLabel": "รายการสกิลและหลักการ",
+    "srTitle": "karpathy-guidelines และหลักการทั้งสี่ข้อ",
+    "empty": "ไม่พบรายการที่ตรงกับคำค้น ลองใช้คำสั้นลง หรือล้างช่องค้นหา"
+  },
+  "detail": {
+    "ariaLabel": "รายละเอียดสกิลและหลักการ"
+  },
+  "footer": {
+    "note": "",
+    "meta": "karpathy-guidelines 1.0.0 · MIT",
+    "source": "ที่มา <code>github.com/forrestchang/andrej-karpathy-skills</code> (MIT)"
+  },
+  "noscript": "หน้านี้ต้องใช้ JavaScript เพื่อแสดงสกิลและหลักการทั้ง 5 รายการ"
+}

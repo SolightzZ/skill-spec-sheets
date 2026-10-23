@@ -1,0 +1,50 @@
+{
+  "stem": "caveman-docs",
+  "title": "caveman — skillsheet 4.0.1",
+  "description": "caveman 4.0.1 — 6 สวิตช์, 6 กฎ, 7 skills และ 10 CLI commands",
+  "masthead": {
+    "title": "caveman",
+    "lede": "ลดความยาวคำตอบและบริบท โดยคงความแม่นยำของโค้ด",
+    "stamp": [
+      {
+        "label": "เวอร์ชัน",
+        "value": "4.0.1"
+      },
+      {
+        "label": "สวิตช์",
+        "value": "6"
+      },
+      {
+        "label": "รายการ",
+        "value": "40"
+      },
+      {
+        "label": "เอเจนต์",
+        "value": "30+"
+      }
+    ]
+  },
+  "rail": {
+    "ariaLabel": "ค้นหาและกรองรายการ",
+    "label": "ค้นหา",
+    "placeholder": "ชื่อสวิตช์ คำสั่ง หรือตัวเลข",
+    "filters": {
+      "mode": "none"
+    },
+    "status": "ทั้งหมด · 40 จาก 40 รายการ"
+  },
+  "index": {
+    "ariaLabel": "รายการทั้งหมด",
+    "srTitle": "รายการทั้งหมด",
+    "empty": "ไม่พบรายการที่ตรงกับคำค้น ลองใช้คำสั้นลง หรือกด &ldquo;ทั้งหมด&rdquo;"
+  },
+  "detail": {
+    "ariaLabel": "รายละเอียด"
+  },
+  "footer": {
+    "note": "",
+    "meta": "caveman 4.0.1 · Apache-2.0",
+    "source": "ที่มา <code>github.com/JuliusBrussee/caveman</code> (Apache-2.0 · LICENSE-MIT สำหรับส่วนก่อน 3.0)"
+  },
+  "noscript": "หน้านี้ต้องใช้ JavaScript เพื่อแสดงรายการ 40 รายการ"
+}

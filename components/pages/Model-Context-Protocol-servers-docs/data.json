@@ -1,0 +1,84 @@
+{
+  "stem": "Model-Context-Protocol-servers-docs",
+  "title": "MCP servers — serversheet",
+  "description": "MCP reference servers — 7 servers สำหรับไฟล์ เว็บ ความจำ และการคิดเป็นขั้นตอน",
+  "masthead": {
+    "title": "MCP servers",
+    "lede": "7 reference servers สำหรับ filesystem, web, memory และ sequential thinking",
+    "stamp": [
+      {
+        "label": "เซิร์ฟเวอร์",
+        "value": "7"
+      },
+      {
+        "label": "ภาษา",
+        "value": "TS 4 · Py 3"
+      },
+      {
+        "label": "สถานะ",
+        "value": "reference"
+      },
+      {
+        "label": "โปรโตคอล",
+        "value": "MCP"
+      }
+    ]
+  },
+  "rail": {
+    "ariaLabel": "ค้นหาและกรองเซิร์ฟเวอร์",
+    "label": "ค้นหาเซิร์ฟเวอร์",
+    "placeholder": "ชื่อเซิร์ฟเวอร์ หรือเครื่องมือ",
+    "filters": {
+      "mode": "none",
+      "className": "",
+      "ariaLabel": "กรองตามหมวด",
+      "chips": [
+        {
+          "cat": "all",
+          "label": "ทั้งหมด",
+          "count": 7,
+          "pressed": "true"
+        },
+        {
+          "cat": "files",
+          "label": "ไฟล์และโค้ด",
+          "count": 2,
+          "pressed": "false"
+        },
+        {
+          "cat": "context",
+          "label": "เว็บและเวลา",
+          "count": 2,
+          "pressed": "false"
+        },
+        {
+          "cat": "mind",
+          "label": "ความจำและการคิด",
+          "count": 2,
+          "pressed": "false"
+        },
+        {
+          "cat": "protocol",
+          "label": "ทดสอบโปรโตคอล",
+          "count": 1,
+          "pressed": "false"
+        }
+      ]
+    },
+    "status": "7 จาก 7 เซิร์ฟเวอร์"
+  },
+  "index": {
+    "ariaLabel": "รายการเซิร์ฟเวอร์",
+    "srTitle": "รายการเซิร์ฟเวอร์ทั้งหมด",
+    "empty": "ไม่พบเซิร์ฟเวอร์ที่ตรงกับคำค้น ลองใช้คำสั้นลง หรือกด &ldquo;ทั้งหมด&rdquo;"
+  },
+  "detail": {
+    "ariaLabel": "รายละเอียดเซิร์ฟเวอร์"
+  },
+  "footer": {
+    "note": "",
+    "meta": "servers 0.6.2 · MIT / Apache-2.0",
+    "source": "ที่มา <code>github.com/modelcontextprotocol/servers</code>"
+  },
+  "noscript": "หน้านี้ต้องใช้ JavaScript เพื่อแสดงรายการ 7 เซิร์ฟเวอร์"
+}
